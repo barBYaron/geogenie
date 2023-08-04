@@ -2,6 +2,7 @@
 @import 'about.scss';
 @import 'software.scss';
 @import 'hardware.scss';
+@import 'contact.scss';
 
 * {
     margin: 0;
@@ -15,7 +16,6 @@ body {
     font-weight: 400;
     color: #5c6062;
     text-align: center;
-
 }
 
 h1,
@@ -33,6 +33,7 @@ section {
 
 a {
     color: #e3051b;
+    cursor: pointer;
 }
 
 .wrapper {
@@ -181,7 +182,7 @@ a {
                         color: #e3051b;
                     }
                 }
-
+// it should be just p under content
                 &__p {
                     position: relative;
                     // width: 90%;
