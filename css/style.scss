@@ -28,7 +28,7 @@ h6 {
 }
 
 section {
-    padding: 75px 5px;
+    padding: 75px 0px;
 }
 
 a {
@@ -43,7 +43,8 @@ a {
 .headline {
     text-align: center;
     line-height: 1.2;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
+    height: 33.6px;
 
     h2 {
         font-weight: bold;
@@ -61,21 +62,51 @@ a {
 
 .button {
     font-size: 18px;
-    // font-weight: 8;
     font-family: 'Black Ops One', cursive;
     font-family: 'Kodchasan', sans-serif;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Nunito Sans', sans-serif;
     transition-duration: 0.3s;
+    padding: 10px 16px;
+    width: 160px;
+    
+    &--readMore {
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px solid white;
+        margin-right: 20px;
+        // padding: 10px 16px;
+        color: white;
+        // width: 120px;
+
+        &:hover {
+            background-color: white;
+            color: #5c6062;
+        }
+    }
+
+    &--contactUs {
+        background-color: #e3051b;
+        border: 1px solid #e3051b;
+        margin-right: 0px;
+        // padding: 10px 16px;
+        color: white;
+        // width: 120px;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0);
+            color: #e3051b;
+        }
+    }
 }
 
 .headerPage {
     position: relative;
     width: 100%;
     // height: 26vh;
-    height: 250px;
+    height: 400px;
     // background-image: ;
     background-color: #5c6062;
+    padding: 75px 20px;
 
     &__headerTaxt {
         position: relative;
