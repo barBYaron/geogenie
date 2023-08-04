@@ -1,0 +1,262 @@
+.headerHome {
+    width: 100%;
+    height: 50vh;
+    margin: auto;
+    background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+
+    &__headerHomeTaxt {
+        margin-left: 20%;
+        width: 600px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        // align-items: center;
+        text-align: left;
+
+        h1 {
+            font-size: 35px;
+        }
+
+        h3 {
+            margin: 16px 0px;
+        }
+
+        p {
+            margin: 0px 0px 16px 0px;
+        }
+
+        &__buttons {
+            transition-duration: 0.3s;
+            // min-width: 240px;
+            height: 6vh;
+            font-size: 16px;
+
+            &--readMore {
+                background-color: rgba(255, 255, 255, 0);
+                border: 1px solid white;
+                margin-right: 20px;
+                padding: 10px 16px;
+                color: white;
+                width: 120px;
+
+                &:hover {
+                    background-color: white;
+                    color: #5c6062;
+                }
+            }
+
+            &--contactUs {
+                background-color: #e3051b;
+                border: 1px solid #e3051b;
+                margin-right: 0px;
+                padding: 10px 16px;
+                color: white;
+                width: 120px;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0);
+                    color: #e3051b;
+                }
+            }
+        }
+    }
+}
+
+.WhoIsUsing {
+
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        &__box {
+            text-align: center;
+            background: white;
+            border-bottom: 1px solid #e3051b;
+            width: 212px;
+            height: 370px;
+            margin: 10px;
+
+            .image {
+                position: relative;
+
+                img {
+                    width: 212px;
+                    height: 278px;
+                }
+
+                .hidden {
+                    position: absolute;
+                    top: 0vh;
+                    left: 0;
+                    opacity: 0;
+                    background-color: rgba(0, 0, 0, 0.293);
+                    color: white;
+                    transition: opacity 0.3s ease;
+                    width: 212px;
+                    height: 278px;
+                    // padding: 0px 5px;
+                    align-items: center;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                .content {
+                    width: 212px;
+                    height: 71px;
+                }
+            }
+        }
+    }
+}
+
+.partnerBenefits {
+    background-color: rgba(196, 196, 196, 0.3);
+    height: 55vh;
+
+    // &__headline {
+    //     text-align: center;
+    //     line-height: 1.2;
+    //     max-width: 1200px;
+    //     margin: auto;
+
+
+    //     h2 {
+    //         font-weight: bold;
+    //         font-size: 28px;
+
+    //         span {
+    //             color: #e3051b;
+    //         }
+    //     }
+    // }
+
+    &__items {
+        display: flex;
+        // flex-direction: column;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 8vh;
+        gap: 20px;
+
+        &__box {
+            text-align: center;
+            width: 212px;
+            height: 220px;
+            margin: 10px;
+            // width: calc(25% - 20px);
+
+            &__image {
+                position: relative;
+
+                img {
+                    width: 96px;
+                    height: 96px;
+                }
+
+                &__content {
+                    width: 212px;
+                    height: 71px;
+                }
+            }
+        }
+    }
+}
+
+.mainProducts {
+
+    &__items {
+        display: flex;
+        // flex-direction: column;
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 8vh;
+        gap: 20px;
+
+        &__box {
+            position: relative;
+            width: 212px;
+            height: 410px;
+            // text-align: center;
+
+
+            &__titel {
+                width: 212px;
+                height: 115px;
+                background-color: #5c6062;
+                color: #e3051b;
+                text-align: center;
+
+                h3 {
+                    font-size: 1.2rem;
+                    padding: 20px 0;
+                    line-height: 1.2;
+                    font-weight: 400;
+
+                    span {
+                        color: white;
+                    }
+                }
+            }
+
+            &__image {
+                position: relative;
+                top: -60px;
+                // left: 22px;
+                width: 212px;
+
+                img {
+                    // width: 212px;
+                    height: 120px;
+                    margin: auto;
+                }
+            }
+
+            &__content {
+                position: relative;
+                top: -40px;
+                width: 212px;
+                height: 150px;
+                line-height: 1.6;
+            }
+
+            &__learnMore {
+                position: relative;
+                top: -30px;
+                border: 2px solid #5c6062;
+                color: #5c6062;
+                background-color: rgba(255, 255, 255, 0);
+                transition: 0.3s;
+                width: 135px;
+                height: 45px;
+
+                &:hover {
+                    background-color: #5c6062;
+                    color: white;
+                }
+            }
+
+        }
+    }
+}

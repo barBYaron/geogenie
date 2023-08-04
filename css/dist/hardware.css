@@ -1,0 +1,71 @@
+.products {
+  position: relative;
+}
+.products__terra {
+  float: right;
+}
+.products__terra__content {
+  position: relative;
+  width: 482px;
+  height: 300px;
+  box-align: end;
+  align-items: end;
+  text-align: right;
+  background-color: #576067;
+  padding: 10px 35px 95px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.products__terra__content__title {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: "Kodchasan";
+}
+.products__terra__content__title span {
+  color: #e3051b;
+}
+.products__terra__content__p {
+  position: relative;
+  top: -30px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.products__terra__content a {
+  position: relative;
+  top: -26px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  padding: 10px 16px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+.products__terra__content a:hover {
+  border: 2px solid #e3051b;
+  background-color: #e3051b;
+}
+.products__terra__img {
+  justify-content: flex-end;
+  margin-top: -80px;
+  padding: 0 40px;
+  display: flex;
+}
+.products__terra__img img {
+  object-position: top;
+  position: relative;
+  z-index: 1;
+  width: auto;
+  height: 100%;
+  max-width: 350px;
+}

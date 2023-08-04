@@ -1,0 +1,160 @@
+.section2 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__item {
+        position: relative;
+        width: 346px;
+        height: 203px;
+        margin-bottom: 40px;
+
+        &__icon {
+            width: 78px;
+            height: 55px;
+            z-index: 1;
+            border: 1px solid #5c6062;
+        }
+
+        &__line {
+            position: relative;
+            top: -21px;
+            left: 75px;
+            width: 268px;
+            height: 1px;
+            background-color: #5c6062;
+            margin-top: 20px;
+        }
+
+        &__content {
+            text-align: left;
+        }
+    }
+}
+
+.leadership {
+
+    &__block {
+        display: flex;
+        width: 100%;
+        height: 330px;
+        text-align: left;
+
+        &__left {
+            width: 960px;
+            height: 100%;
+            padding: 60px 120px;
+            background-color: rgba(196, 196, 196, 0.3);
+
+            &__title {
+                margin-bottom: 20px;
+
+                h3 {
+                    color: #e3051b;
+                    display: block;
+                    font-size: 1.4em;
+                    margin-block-start: 1em;
+                    margin-block-end: 1em;
+                    margin-inline-start: 0px;
+                    margin-inline-end: 0px;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+
+                strong {
+                    font-weight: bolder;
+                }
+            }
+
+            p {
+                margin-bottom: 15px;
+            }
+        }
+
+        &__right {
+            position: relative;
+            width: 665px;
+            height: 100%;
+            padding: 60px 80px;
+            background-color: #5c6062;
+            color: #fff;
+            font-style: italic;
+
+
+            &__divP {
+                position: relative;
+                // top:-2%;
+                width: 575px;
+                height: 80%;
+                line-height: 1.6;
+            }
+
+            &__quote {
+                color: #e3051b;
+                font-family: 'Kodchasan' !important;
+                display: inline-block;
+                font-size: 8rem;
+                line-height: 1;
+                text-align: center;
+                font-style: normal;
+                font-weight: bold;
+
+            }
+
+            .top {
+                position: absolute;
+                left: 19vw;
+                top: -120px;
+            }
+
+            .bottom {
+                position: absolute;
+                left: 19vw;
+                top: 460px;
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.AboutP {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+    margin-top: 15px;
+
+    &__profile {
+        width: calc(50% - 60px);
+        margin-bottom: 40px;
+
+        &__title {
+            margin-bottom: 20px;
+
+            h3 {
+                color: #e3051b;
+                display: block;
+                font-size: 1.4em;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            strong {
+                font-weight: bolder;
+            }
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+    }
+}

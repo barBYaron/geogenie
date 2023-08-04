@@ -1,0 +1,101 @@
+@import 'home.scss';
+@import 'about.scss';
+@import 'software.scss';
+@import 'hardware.scss';
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 400;
+    color: #5c6062;
+    text-align: center;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Kodchasan';
+}
+
+section {
+    padding: 75px 5px;
+}
+
+a {
+    color: #e3051b;
+}
+
+.wrapper {
+    margin: auto;
+    max-width: 1200px;
+}
+
+.headline {
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 20px;
+
+    h2 {
+        font-weight: bold;
+        font-size: 28px;
+
+        span {
+            color: #e3051b;
+        }
+    }
+}
+
+.headlineLeft {
+    float: left;
+}
+
+.button {
+    font-size: 18px;
+    // font-weight: 8;
+    font-family: 'Black Ops One', cursive;
+    font-family: 'Kodchasan', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+    transition-duration: 0.3s;
+}
+
+.headerPage {
+    position: relative;
+    width: 100%;
+    // height: 26vh;
+    height: 250px;
+    // background-image: ;
+    background-color: #5c6062;
+
+    &__headerTaxt {
+        position: relative;
+        top: 2vh;
+        color: white;
+        margin-left: 18%;
+        width: 600px;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: left;
+
+        h1 {
+            font-size: 35px;
+            line-height: 2.5;
+        }
+
+        p {
+            margin: 0px 0px 16px 0px;
+        }
+    }
+}

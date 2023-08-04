@@ -1,0 +1,198 @@
+.headerHome {
+  width: 100%;
+  height: 50vh;
+  margin: auto;
+  background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  color: white;
+}
+.headerHome__headerHomeTaxt {
+  margin-left: 20%;
+  width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.headerHome__headerHomeTaxt h1 {
+  font-size: 35px;
+}
+.headerHome__headerHomeTaxt h3 {
+  margin: 16px 0px;
+}
+.headerHome__headerHomeTaxt p {
+  margin: 0px 0px 16px 0px;
+}
+.headerHome__headerHomeTaxt__buttons {
+  transition-duration: 0.3s;
+  height: 6vh;
+  font-size: 16px;
+}
+.headerHome__headerHomeTaxt__buttons--readMore {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid white;
+  margin-right: 20px;
+  padding: 10px 16px;
+  color: white;
+  width: 120px;
+}
+.headerHome__headerHomeTaxt__buttons--readMore:hover {
+  background-color: white;
+  color: #5c6062;
+}
+.headerHome__headerHomeTaxt__buttons--contactUs {
+  background-color: #e3051b;
+  border: 1px solid #e3051b;
+  margin-right: 0px;
+  padding: 10px 16px;
+  color: white;
+  width: 120px;
+}
+.headerHome__headerHomeTaxt__buttons--contactUs:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: #e3051b;
+}
+
+.WhoIsUsing__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.WhoIsUsing__items__box {
+  text-align: center;
+  background: white;
+  border-bottom: 1px solid #e3051b;
+  width: 212px;
+  height: 370px;
+  margin: 10px;
+}
+.WhoIsUsing__items__box .image {
+  position: relative;
+}
+.WhoIsUsing__items__box .image img {
+  width: 212px;
+  height: 278px;
+}
+.WhoIsUsing__items__box .image .hidden {
+  position: absolute;
+  top: 0vh;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.293);
+  color: white;
+  transition: opacity 0.3s ease;
+  width: 212px;
+  height: 278px;
+  align-items: center;
+}
+.WhoIsUsing__items__box .image .hidden:hover {
+  opacity: 1;
+}
+.WhoIsUsing__items__box .image .content {
+  width: 212px;
+  height: 71px;
+}
+
+.partnerBenefits {
+  background-color: rgba(196, 196, 196, 0.3);
+  height: 55vh;
+}
+.partnerBenefits__items {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 8vh;
+  gap: 20px;
+}
+.partnerBenefits__items__box {
+  text-align: center;
+  width: 212px;
+  height: 220px;
+  margin: 10px;
+}
+.partnerBenefits__items__box__image {
+  position: relative;
+}
+.partnerBenefits__items__box__image img {
+  width: 96px;
+  height: 96px;
+}
+.partnerBenefits__items__box__image__content {
+  width: 212px;
+  height: 71px;
+}
+
+.mainProducts__items {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 8vh;
+  gap: 20px;
+}
+.mainProducts__items__box {
+  position: relative;
+  width: 212px;
+  height: 410px;
+}
+.mainProducts__items__box__titel {
+  width: 212px;
+  height: 115px;
+  background-color: #5c6062;
+  color: #e3051b;
+  text-align: center;
+}
+.mainProducts__items__box__titel h3 {
+  font-size: 1.2rem;
+  padding: 20px 0;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.mainProducts__items__box__titel h3 span {
+  color: white;
+}
+.mainProducts__items__box__image {
+  position: relative;
+  top: -60px;
+  width: 212px;
+}
+.mainProducts__items__box__image img {
+  height: 120px;
+  margin: auto;
+}
+.mainProducts__items__box__content {
+  position: relative;
+  top: -40px;
+  width: 212px;
+  height: 150px;
+  line-height: 1.6;
+}
+.mainProducts__items__box__learnMore {
+  position: relative;
+  top: -30px;
+  border: 2px solid #5c6062;
+  color: #5c6062;
+  background-color: rgba(255, 255, 255, 0);
+  transition: 0.3s;
+  width: 135px;
+  height: 45px;
+}
+.mainProducts__items__box__learnMore:hover {
+  background-color: #5c6062;
+  color: white;
+}

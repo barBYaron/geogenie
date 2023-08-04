@@ -1,0 +1,135 @@
+.section2 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.section2__item {
+  position: relative;
+  width: 346px;
+  height: 203px;
+  margin-bottom: 40px;
+}
+.section2__item__icon {
+  width: 78px;
+  height: 55px;
+  z-index: 1;
+  border: 1px solid #5c6062;
+}
+.section2__item__line {
+  position: relative;
+  top: -21px;
+  left: 75px;
+  width: 268px;
+  height: 1px;
+  background-color: #5c6062;
+  margin-top: 20px;
+}
+.section2__item__content {
+  text-align: left;
+}
+
+.leadership__block {
+  display: flex;
+  width: 100%;
+  height: 330px;
+  text-align: left;
+}
+.leadership__block__left {
+  width: 960px;
+  height: 100%;
+  padding: 60px 120px;
+  background-color: rgba(196, 196, 196, 0.3);
+}
+.leadership__block__left__title {
+  margin-bottom: 20px;
+}
+.leadership__block__left__title h3 {
+  color: #e3051b;
+  display: block;
+  font-size: 1.4em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.leadership__block__left__title strong {
+  font-weight: bolder;
+}
+.leadership__block__left p {
+  margin-bottom: 15px;
+}
+.leadership__block__right {
+  position: relative;
+  width: 665px;
+  height: 100%;
+  padding: 60px 80px;
+  background-color: #5c6062;
+  color: #fff;
+  font-style: italic;
+}
+.leadership__block__right__divP {
+  position: relative;
+  width: 575px;
+  height: 80%;
+  line-height: 1.6;
+}
+.leadership__block__right__quote {
+  color: #e3051b;
+  font-family: "Kodchasan" !important;
+  display: inline-block;
+  font-size: 8rem;
+  line-height: 1;
+  text-align: center;
+  font-style: normal;
+  font-weight: bold;
+}
+.leadership__block__right .top {
+  position: absolute;
+  left: 19vw;
+  top: -120px;
+}
+.leadership__block__right .bottom {
+  position: absolute;
+  left: 19vw;
+  top: 460px;
+  transform: rotate(180deg);
+}
+
+.AboutP {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  margin-top: 15px;
+}
+.AboutP__profile {
+  width: calc(50% - 60px);
+  margin-bottom: 40px;
+}
+.AboutP__profile__title {
+  margin-bottom: 20px;
+}
+.AboutP__profile__title h3 {
+  color: #e3051b;
+  display: block;
+  font-size: 1.4em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.AboutP__profile__title strong {
+  font-weight: bolder;
+}
+.AboutP__profile p {
+  margin-bottom: 15px;
+}
