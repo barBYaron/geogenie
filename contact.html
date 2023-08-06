@@ -51,20 +51,41 @@
     <section class="form wrapper">
 
         <form>
-            <label for="full name">Full name</label>
-            <input type="text" name="full name" required>
-            <label for="email">email</label>
-            <input type="email" name="email" required>
-            <label for="Phone Number">Phone Number</label>
-            <input type="tel" name="phoneNumber" required>
-            <label for="Country"></label>
-            <input type="text" name="Country">
+            <div class="form__half">
+                <label for="full name"><span>*</span>Full name</label>
+                <input type="text" name="full name" required>
+            </div>
 
-            <label for="message">How can we help you?</label>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <div class="form__half">
+                <label for="email"><span>*</span>email</label>
+                <input type="email" name="email" required>
+            </div>
 
-            <button type="submit">Send Message</button>
+            <div class="form__half">
+                <label for="Phone Number"><span>*</span>Phone Number</label>
+                <input type="tel" name="phoneNumber" required>
+            </div>
+
+            <div class="form__half">
+                <label for="Country">Country</label>
+                <input type="text" name="Country">
+            </div>
+
+            <div class="form__full">
+                <label for="message">How can we help you?</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="form__submit">
+                <button type="submit">Send Message</button>
+            </div>
+
         </form>
+
+        <div class="form__links">
+            <a href="https://www.facebook.com/profile.php?id=100089896091480"></a>
+            <a href="https://www.linkedin.com/in/terragenie-ltd-793209257/"></a>
+        </div>
 
     </section>
 

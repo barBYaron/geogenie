@@ -36,6 +36,16 @@ a {
     cursor: pointer;
 }
 
+textarea {
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button {
+    font-size: 100%;
+}
+
 .wrapper {
     margin: auto;
     max-width: 1200px;
@@ -110,26 +120,32 @@ a {
     background-color: #5c6062;
     padding: 75px 20px;
 
-    &__headerTaxt {
-        position: relative;
-        top: 2vh;
-        color: white;
-        margin-left: 18%;
-        width: 600px;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        text-align: left;
+    &__conteiner {
+        max-width: 1200PX;
+        margin: auto;
 
-        h1 {
-            font-size: 35px;
-            line-height: 2.5;
+        &__taxt {
+            position: relative;
+            top: 2vh;
+            color: white;
+            // margin-left: 18%;
+            width: 600px;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: left;
+
+            h1 {
+                font-size: 35px;
+                line-height: 2.5;
+            }
+
+            p {
+                margin: 0px 0px 16px 0px;
+            }
         }
 
-        p {
-            margin: 0px 0px 16px 0px;
-        }
     }
 }
 
@@ -182,7 +198,8 @@ a {
                         color: #e3051b;
                     }
                 }
-// it should be just p under content
+
+                // it should be just p under content
                 &__p {
                     position: relative;
                     // width: 90%;
