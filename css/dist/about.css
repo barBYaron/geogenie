@@ -5,12 +5,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 15px;
 }
 .section2__item {
   position: relative;
   width: 346px;
-  height: 203px;
+  width: calc(33.3% - 40px);
   margin-bottom: 40px;
+  box-align: start;
+  align-items: flex-start;
 }
 .section2__item__icon {
   width: 78px;
@@ -32,13 +35,12 @@
 }
 
 .leadership__block {
-  display: flex;
+  display: grid;
+  grid-template-columns: 60% 40%;
   margin-top: 35px;
-  height: 460px;
   text-align: left;
 }
 .leadership__block__left {
-  width: 60%;
   height: 100%;
   padding: 60px 120px;
   background-color: rgba(196, 196, 196, 0.3);
@@ -65,39 +67,35 @@
 }
 .leadership__block__right {
   position: relative;
-  width: 40%;
   height: 100%;
   padding: 60px 120px;
   background-color: #5c6062;
   color: #fff;
   font-style: italic;
 }
-.leadership__block__right__divP {
+.leadership__block__right p {
   position: relative;
-  width: 575px;
-  height: 80%;
   line-height: 1.6;
 }
 .leadership__block__right__quote {
   color: #e3051b;
   font-family: "Kodchasan" !important;
+  position: absolute;
   display: inline-block;
   font-size: 8rem;
   line-height: 1;
+  left: 0;
+  right: 0;
   text-align: center;
   font-style: normal;
   font-weight: bold;
 }
 .leadership__block__right .top {
-  position: absolute;
-  left: 19vw;
-  top: -112px;
+  top: -110px;
 }
 .leadership__block__right .bottom {
-  position: absolute;
-  left: 19vw;
-  top: 444px;
   transform: rotate(180deg);
+  bottom: -110px;
 }
 
 .AboutP {
@@ -107,7 +105,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   text-align: left;
-  margin-top: 15px;
 }
 .AboutP__profile {
   width: calc(50% - 60px);

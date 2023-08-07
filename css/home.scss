@@ -1,43 +1,44 @@
 .headerHome {
     width: 100%;
-    // height: 668px;
     height: 70vh;
     background-position: 50% 50%;
-    padding: 75px 20px;
-    margin: auto;
     background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3.jpg);
     background-size: cover;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
     color: white;
 
-    &__taxt {
-        margin-left: 20%;
-        width: 600px;
-        height: auto;
+    &__contener {
+        padding: 75px 20px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        // align-items: center;
-        text-align: left;
+        align-items: center;
 
-        h1 {
-            font-size: 35px;
-        }
+        &__taxt {
+            // margin-left: 20%;
+            width: 50%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: left;
 
-        h3 {
-            margin: 16px 0px;
-        }
+            h1 {
+                font-size: 35px;
+            }
 
-        p {
-            margin: 0px 0px 16px 0px;
-        }
+            h3 {
+                margin: 16px 0px;
+            }
 
-        &__buttons {
-            height: 6vh;
-            // font-size: 16px;
+            p {
+                margin: 0px 0px 16px 0px;
+            }
+
+            &__buttons {
+                height: 6vh;
+                // font-size: 16px;
+            }
         }
     }
 }
@@ -57,7 +58,8 @@
             text-align: center;
             background: white;
             border-bottom: 1px solid #e3051b;
-            width: 212px;
+            // width: 212px;
+            width: calc(20% - 20px);
             height: 376px;
             margin: 10px;
 
@@ -66,8 +68,9 @@
                 margin-bottom: 15px;
 
                 img {
-                    width: 212px;
-                    height: 270px;
+                    width: 100%;
+                    // width: 212px;
+                    // height: 270px;
                 }
 
                 .hidden {
@@ -78,7 +81,8 @@
                     background-color: rgba(0, 0, 0, 0.293);
                     color: white;
                     transition: opacity 0.3s ease;
-                    width: 212px;
+                    width: 100%;
+                    // width: 212px;
                     height: 278px;
                     // padding: 0px 5px;
                     align-items: center;
@@ -120,11 +124,11 @@
 
         &__box {
             text-align: center;
-            width: 270px;
+            // width: 270px;
+            width: calc(25% - 20px);
             height: 175px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            // width: calc(25% - 20px);
+            // margin-top: 20px;
+            margin-bottom: 40px;
 
             &__image {
                 position: relative;
@@ -134,13 +138,13 @@
                     height: 96px;
                 }
             }
-            
+
             &__content {
-                width: 270px;
-                height: 71px;
+                // width: 270px;
+                // height: 71px;
                 padding: 10px;
 
-                p{
+                p {
                     display: block;
                     margin-block-start: 1em;
                     margin-block-end: 1em;
@@ -161,20 +165,22 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        max-width: 1200px;
+        // max-width: 1200px;
+        width: 100%;
         margin: auto;
         margin-top: 35px;
         gap: 16px;
 
         &__box {
             position: relative;
-            width: 212px;
+            // width: 212px;
+            width: calc(20% - 20px);
             height: 410px;
             // text-align: center;
 
 
             &__titel {
-                width: 212px;
+                width: 100%;
                 height: 115px;
                 background-color: #5c6062;
                 color: #e3051b;
@@ -196,7 +202,8 @@
                 position: relative;
                 top: -50px;
                 // left: 22px;
-                width: 212px;
+                // width: 212px;
+                width: 100%;
 
                 img {
                     // width: 212px;
@@ -208,7 +215,7 @@
             &__content {
                 position: relative;
                 top: -40px;
-                width: 212px;
+                width: 100%;
                 height: 150px;
                 line-height: 1.6;
             }
@@ -216,19 +223,18 @@
             &__learnMore {
                 position: relative;
                 top: -30px;
+                background-color: rgba(255, 255, 255, 0);
                 border: 2px solid #5c6062;
                 color: #5c6062;
-                background-color: rgba(255, 255, 255, 0);
+                padding: 10px 16px;
+                text-decoration: none;
                 transition: 0.3s;
-                width: 135px;
-                height: 45px;
 
                 &:hover {
                     background-color: #5c6062;
                     color: white;
                 }
             }
-
         }
     }
 }
