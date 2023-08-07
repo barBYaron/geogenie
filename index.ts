@@ -1,5 +1,5 @@
 function renderHeader(root: HTMLElement | null) {
-  const header = `
+    const header = `
   <div class="header__container">
 
   <div class="header__container__left">
@@ -56,10 +56,51 @@ function renderHeader(root: HTMLElement | null) {
 
   </div>
 
-</div>`
+</div>`;
 
     if (root) {
         root.innerHTML = header;
-        }
+    }
 }
 renderHeader(document.querySelector('#header'));
+
+function renderFooter(root: HTMLElement | null) {
+    const footer = `
+    
+    <div class="footer__block"></div>
+
+    <div class="footer__block">
+        <a href="./about.html">ABOUT</a>
+        <a href="./hardware.html">PRODUCTS</a>
+    </div>
+
+    <div class="footer__block">
+        <a href="http://www.facebook.com/profile.php?id=100089896091480">
+            <div></div>
+            Facebook
+        </a>
+
+        <a href="http://www.linkedin.com/in/terragenie-ltd-793209257/">
+            <div></div>
+            Linkedin
+        </a>
+
+        <a href="http://api.whatsapp.com/send/?phone=972508282109">
+            <div></div>
+            Whatsapp
+        </a>
+    </div>
+
+    <div class="footer__block">
+        <p>1 Hashdera St. Zofit, Israel</p>
+
+        <a href="tel:+972-9-7415043">+972-9-7415043</a>
+
+        <p><a href="mailto:info@geo-genie.co.il">info@geo-genie.co.il</a></p>
+    </div>`;
+
+    if (root) {
+        root.innerHTML = footer;
+    }
+}
+renderFooter(document.querySelector('#footer'));
