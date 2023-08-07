@@ -18,6 +18,126 @@ body {
     text-align: center;
 }
 
+header {
+    position: relative;
+    padding: 20px 0px;
+    display: block;
+}
+
+.header {
+    width: 100%;
+    display: block;
+
+    &__container {
+        max-width: 1200px;
+        padding: 0px 20px;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+
+        &__left {
+            justify-content: flex-start;
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 40px;
+                max-width: 100%;
+            }
+        }
+
+        &__empty {
+            flex-grow: 1;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+
+        &__right {
+            justify-content: flex-end;
+            display: flex;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            // width: 100%;
+            flex-wrap: nowrap;
+            transition-property: opacity, transform, visibility;
+
+            &__label {
+                padding: 0px 20px;
+                font-size: 1.2rem;
+                font-weight: 700;
+                cursor: pointer;
+
+                a {
+                    text-decoration: none;
+                    border-style: solid;
+                    border-width: 0;
+                    transition-timing-function: ease-in-out;
+                    transition-property: background-color, color, border-color;
+                    border-color: transparent;
+                    color: #5c6062;
+                    display: flex;
+                }
+
+                &:hover {
+                    .header__container__right__label__line {
+                        opacity: 1;
+                    }
+                }
+
+                &__line {
+                    width: 30px;
+                    height: 5px;
+                    margin: auto;
+                    background-color: #e3051b;
+                    border-radius: 40px;
+                    opacity: 0;
+                }
+
+                ul {
+                    transition-duration: 4s;
+                    padding: 0;
+                    flex-direction: column;
+                    white-space: nowrap;
+                    display: flex;
+                    position: absolute;
+                    z-index: 999;
+                    margin: auto;
+                    top: 100%;
+                    display: none;
+
+                    li {
+                        background-color: white;
+                        width: 158px;
+                        height: 53px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hardware {
+    &:hover {
+         ul {
+            display: block;
+         }
+         .header__container__right__label__line {
+            opacity: 0;
+        }
+    }
+}
+
+.click {
+    margin-left: 10px;
+    transform: rotate(90deg);
+}
+
 h1,
 h2,
 h3,
