@@ -35,28 +35,31 @@
   height: 6vh;
 }
 
-.WhoIsUsing__items {
+.WhoIsUsing {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-bottom: 55px;
+}
+.WhoIsUsing__items {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .WhoIsUsing__items__box {
   text-align: center;
-  background: white;
   border-bottom: 1px solid #e3051b;
   width: calc(20% - 20px);
-  height: 376px;
-  margin: 10px;
+  margin-bottom: 20px;
+  flex-shrink: 0;
 }
 .WhoIsUsing__items__box .image {
   position: relative;
-  margin-bottom: 15px;
 }
 .WhoIsUsing__items__box .image img {
   width: 100%;
+  height: auto;
 }
 .WhoIsUsing__items__box .image .hidden {
   position: absolute;
@@ -77,6 +80,9 @@
   width: 212px;
   height: 71px;
   margin-top: 25px;
+}
+.WhoIsUsing__items__box .content {
+  padding: 10px 0;
 }
 
 .partnerBenefits {

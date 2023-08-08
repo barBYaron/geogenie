@@ -44,33 +44,40 @@
 }
 
 .WhoIsUsing {
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 55px;
+    // text-align: center;
 
     &__items {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
         flex-direction: row;
+        // align-items: flex-start;
+        // flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
+        
 
         &__box {
             text-align: center;
-            background: white;
+            // background: white;
             border-bottom: 1px solid #e3051b;
-            // width: 212px;
+             // width: 212px;
             width: calc(20% - 20px);
-            height: 376px;
-            margin: 10px;
+            // height: 376px;
+            // margin: 10px;
+            margin-bottom: 20px;
+            flex-shrink: 0;
 
             .image {
                 position: relative;
-                margin-bottom: 15px;
+                // margin-bottom: 15px;
 
                 img {
                     width: 100%;
-                    // width: 212px;
-                    // height: 270px;
+                    // width: 768px;
+                    height: auto;
                 }
 
                 .hidden {
@@ -97,6 +104,10 @@
                     height: 71px;
                     margin-top: 25px;
                 }
+            }
+
+            .content {
+                padding: 10px 0;
             }
         }
     }
