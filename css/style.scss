@@ -559,9 +559,23 @@ header {
     }
 }
 
+//haeder//
 @media only screen and (max-width: 991px) {
     .WhoIsUsing {
         padding-top: 40px;
+
+        &__items {
+            overflow: scroll;
+
+            &__box {
+                width: calc(25% - 20px);
+            }
+        }
+    }
+
+    .mainProducts {
+        padding-top: 40px;
+        padding-bottom: 40px;
 
         &__items {
             overflow: scroll;
@@ -666,5 +680,5 @@ header {
     }
 }
 
-// -768, haeder, home,contact, footer, hadline.
+// -768, home,contact, footer, hadline.
 @media only screen and (max-width: 768px) {}

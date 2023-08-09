@@ -952,6 +952,17 @@ header {
     width: calc(25% - 20px);
   }
 
+  .mainProducts {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .mainProducts__items {
+    overflow: scroll;
+  }
+  .mainProducts__items__box {
+    width: calc(25% - 20px);
+  }
+
   .section2__contener__item {
     width: calc(50% - 20px);
   }
