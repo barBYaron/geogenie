@@ -1,17 +1,26 @@
 .contactUs {
   margin-top: -105px;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
   width: 100%;
-  padding: 40px 20px;
+  background-size: cover;
+  background-repeat: repeat;
+}
+.contactUs__contener {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   box-shadow: 0px 20px 26px rgba(0, 0, 0, 0.05), 0px 8px 9px rgba(0, 0, 0, 0.06);
-  flex-direction: column;
-  align-items: flex-start;
-  z-index: 2;
-  min-height: 334px;
   backdrop-filter: blur(30px);
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.contactUs__text {
+.contactUs__contener__text {
   max-width: 600px;
   margin: auto;
   display: flex;
@@ -19,25 +28,25 @@
   flex-direction: column;
   align-items: flex-start;
 }
-.contactUs__text h1 {
+.contactUs__contener__text h1 {
   width: 100%;
   font-size: 35px;
   font-weight: bold;
 }
-.contactUs__text p {
+.contactUs__contener__text p {
   width: 100%;
   margin-top: 20px;
 }
-.contactUs__icons {
+.contactUs__contener__icons {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
-.contactUs__icons a {
+.contactUs__contener__icons a {
   color: #5c6062;
   border-bottom: #00000000;
 }
-.contactUs__icons__box {
+.contactUs__contener__icons__box {
   flex-direction: column;
   box-align: center;
   display: flex;
@@ -46,58 +55,60 @@
   font-size: 22px;
   align-items: center;
 }
-.contactUs__icons__box__item {
+.contactUs__contener__icons__box__item {
   width: 50px;
   height: 50px;
   border: 1px solid #000000;
 }
 
-.form {
-  width: 100%;
+.form__contener {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.form form {
-  width: 100%;
+.form__contener form {
   display: flex;
   flex-wrap: wrap;
+  -webkit-box-pack: justify;
   justify-content: space-between;
   font-weight: bolder;
 }
-.form form label span {
+.form__contener form label span {
   color: #e3051b;
 }
-.form__half {
+.form__contener__half {
   display: flex;
   flex-wrap: wrap;
   width: calc(50% - 10px);
 }
-.form__half input {
+.form__contener__half input {
   width: 100%;
   margin-bottom: 20px;
   cursor: default;
   border: 1px solid #5C6062;
   min-height: 40px;
 }
-.form__full {
+.form__contener__full {
   width: 100%;
   min-height: 40px;
 }
-.form__full label {
+.form__contener__full label {
   float: left;
 }
-.form__full textarea {
+.form__contener__full textarea {
   width: 100%;
   cursor: default;
   border: 1px solid #5C6062;
   min-height: 100%;
 }
-.form__submit {
+.form__contener__submit {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   margin-top: 60px;
 }
-.form__submit button {
+.form__contener__submit button {
   padding: 10px 18px;
   margin: auto;
   min-width: 260px;
@@ -107,7 +118,7 @@
   background-color: #e3051b;
   border: 1px solid #e3051b;
 }
-.form__links {
+.form__contener__links {
   display: flex;
   width: 200px;
   margin: auto;
@@ -115,7 +126,7 @@
   gap: 30px;
   align-items: center;
 }
-.form__links a {
+.form__contener__links a {
   width: 61px;
   height: 56px;
   border: 1px solid #5C6062;

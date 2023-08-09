@@ -1,41 +1,41 @@
 .section2 {
-    position: relative;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: flex-start;
-    gap: 15px;
 
-    &__item {
-        position: relative;
-        width: 346px;
-        // display: flex;
-        // height: 203px;
-        width: calc(33.3% - 40px);
-        margin-bottom: 40px;
-        box-align: start;
+    &__contener {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
         align-items: flex-start;
 
-        &__icon {
-            width: 78px;
-            height: 55px;
-            z-index: 1;
-            border: 1px solid #5c6062;
-        }
+        &__item {
+            display: flex;
+            flex-wrap: wrap;
+            -webkit-box-align: start;
+            align-items: flex-start;
+            width: calc(33.3% - 40px);
+            margin-bottom: 40px;
 
-        &__line {
-            position: relative;
-            top: -21px;
-            left: 75px;
-            width: 268px;
-            height: 1px;
-            background-color: #5c6062;
-            margin-top: 20px;
-        }
+            &__icon {
+                width: 78px;
+                height: 55px;
+                z-index: 1;
+                border: 1px solid #5c6062;
+            }
 
-        &__content {
-            text-align: left;
+            &__line {
+                width: 74%;
+                height: 1px;
+                align-self: self-end;
+                background-color: #e3051b;
+            }
+
+            &__content {
+                text-align: left;
+                margin-top: 20px;
+            }
         }
     }
 }
@@ -48,11 +48,23 @@
         margin-top: 35px;
         text-align: left;
 
+        @media only screen and (max-width: 992px) {
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+        }
+
         &__left {
             // width: 60%;
             height: 100%;
             padding: 60px 120px;
             background-color: rgba(196, 196, 196, 0.3);
+
+            @media only screen and (max-width: 992px) {
+                padding: 60px 80px;
+                width: 100%;
+            }
 
             &__title {
                 margin-bottom: 20px;
@@ -88,6 +100,10 @@
             color: #fff;
             font-style: italic;
 
+            @media only screen and (max-width: 992px) {
+                padding: 60px 80px;
+                width: 100%;
+            }
 
             p {
                 position: relative;

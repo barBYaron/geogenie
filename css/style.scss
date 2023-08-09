@@ -90,7 +90,8 @@ body {
                     }
                 }
 
-                .onlyP, a {
+                .onlyP,
+                a {
                     display: flex;
                     justify-content: flex-start;
                     flex-direction: row;
@@ -104,7 +105,7 @@ body {
                     transition-timing-function: ease-in-out;
                     transition-property: background-color, color, border-color;
                     border-color: transparent;
-                
+
 
                     div {
                         position: relative;
@@ -141,6 +142,7 @@ p {
 
 section {
     padding: 75px 0px;
+    display: block;
 }
 
 a {
@@ -270,8 +272,10 @@ header {
 }
 
 .wrapper {
-    margin: auto;
-    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    padding: 75px 20px;
 }
 
 .headline {
@@ -376,8 +380,9 @@ header {
 }
 
 .products {
-    position: relative;
-    max-width: 1160px;
+    // position: relative;
+    // max-width: 1160px;
+    width: 100%;
 
     &__Block {
         width: 100%;
@@ -395,9 +400,6 @@ header {
             width: 45%;
 
             &__content {
-                // position: relative;
-                // width: 45%;
-                // height: 370px;
                 box-align: end;
                 align-items: end;
                 text-align: right;
@@ -430,7 +432,6 @@ header {
                     }
                 }
 
-                // it should be just p under content
                 &__p {
                     // position: relative;
                     // width: 90%;
@@ -448,10 +449,6 @@ header {
                 }
 
                 a {
-                    // position: relative;
-                    // top: -65px;
-                    // background-color: transparent;
-                    // cursor: pointer;
                     border: 2px solid #ffffff;
                     padding: 10px 16px;
                     color: #fff;
@@ -470,12 +467,6 @@ header {
                     align-items: start;
                     text-align: left;
                 }
-
-                &--software {
-                    width: 522px;
-                    height: 268px;
-                    padding: 20px 40px 100px;
-                }
             }
 
             &__img {
@@ -486,6 +477,13 @@ header {
                 padding: 0 40px;
                 display: flex;
                 height: 100%;
+
+                @media only screen and (min-width: 992px) {
+                    -webkit-box-pack: center;
+                    justify-content: center;
+                    padding-bottom: 50%;
+                    overflow: hidden;
+                }
 
                 img {
                     position: absolute;
@@ -510,7 +508,6 @@ header {
         }
 
         &__imagse {
-            // height: 888px;
             width: 65%;
             margin-right: -10%;
             display: flex;
@@ -518,15 +515,16 @@ header {
             justify-content: space-between;
             -webkit-box-pack: justify;
 
-            &--opposite {
-                // position: relative;
-                // right: 10%;
-                margin-left: -10%;
+            @media only screen and (min-width: 992px) {
+                width: 100%;
+                margin-top: 0;
+                margin-right: 0%;
+                margin-left: 0%;
             }
 
-            // &--software {
-            //     height: 1071px;
-            // }
+            &--opposite {
+                margin-left: -10%;
+            }
 
             &__bigImg {
                 width: 100%;
@@ -536,15 +534,6 @@ header {
                 img {
                     max-width: 100%;
                 }
-
-                // &--software {
-                //     height: 782px;
-                // }
-
-                // &--opposite {
-                //     height: 573px;
-                //     margin-bottom: 0;
-                // }
             }
 
             &__smollImg {
@@ -561,3 +550,121 @@ header {
 
     }
 }
+
+@media only screen and (max-width: 1100px) {
+    .contactUs {
+        &__contener {
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .WhoIsUsing {
+        padding-top: 40px;
+
+        &__items {
+            overflow: scroll;
+
+            &__box {
+                width: calc(25% - 20px);
+            }
+        }
+    }
+
+    .section2 {
+        &__contener {
+            &__item {
+                width: calc(50% - 20px);
+            }
+        }
+    }
+
+    .leadership {
+
+        &__block {
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+
+            &__left {
+                padding: 60px 80px;
+                width: 100%;
+            }
+
+            &__right {
+                padding: 60px 80px;
+                width: 100%;
+            }
+        }
+    }
+
+    .AboutP {
+
+        &__profile {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    .products {
+        padding-top: 0;
+        padding-right: 0;
+        padding-left: 0;
+
+
+        &__Block {
+            -webkit-box-orient: horizontal !important;
+            -webkit-box-direction: normal !important;
+            flex-direction: row !important;
+            flex-wrap: wrap;
+
+            &__terra {
+                width: 100%;
+                padding-top: 0;
+                padding-bottom: 15px;
+
+                &__content {
+                    -webkit-box-align: start;
+                    align-items: flex-start;
+                    text-align: left;
+                    padding: 20px 20px 100px;
+                }
+
+                &__img {
+                    -webkit-box-pack: center;
+                    justify-content: center;
+                    padding-bottom: 50%;
+                    overflow: hidden;
+                }
+
+            }
+
+            &__imagse {
+                width: 100%;
+                margin-top: 0;
+                margin-right: 0%;
+                margin-left: 0%;
+            }
+        }
+    }
+
+    .sectiontText {
+        margin-top: 30px;
+        margin-bottom: 50px;
+        padding-top: 0;
+        padding-bottom: 15px;
+    }
+
+    .headerHome {
+        &__contener {
+            &__taxt {
+                width: 75%;
+            }
+        }
+    }
+}
+
+// -768, haeder, home,contact, footer, hadline.
+@media only screen and (max-width: 768px) {}

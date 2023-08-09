@@ -45,7 +45,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .WhoIsUsing__items__box {
   text-align: center;
@@ -63,14 +63,14 @@
 }
 .WhoIsUsing__items__box .image .hidden {
   position: absolute;
-  top: 0vh;
+  top: -15px;
   left: 0;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.293);
   color: white;
   transition: opacity 0.3s ease;
   width: 100%;
-  height: 278px;
+  height: 100%;
   align-items: center;
 }
 .WhoIsUsing__items__box .image .hidden:hover {
@@ -87,7 +87,6 @@
 
 .partnerBenefits {
   background-color: rgba(196, 196, 196, 0.3);
-  height: 583px;
   padding-top: 40px;
   padding-bottom: 40px;
 }
