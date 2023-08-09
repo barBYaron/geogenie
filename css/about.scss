@@ -48,12 +48,6 @@
         margin-top: 35px;
         text-align: left;
 
-        @media only screen and (max-width: 992px) {
-            display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            flex-direction: column;
-        }
 
         &__left {
             // width: 60%;

@@ -69,7 +69,9 @@ function renderFooter(root: HTMLElement | null) {
 
     <div class="footer__columns">
     
-    <div class="footer__columns__block footer__columns__block--empty"></div>
+    <div class="footer__columns__block footer__columns__block--empty">
+    <a href=""></a>
+    </div>
 
     <div class="footer__columns__block">
         <a href="./about.html">ABOUT</a>
@@ -93,7 +95,7 @@ function renderFooter(root: HTMLElement | null) {
         </a>
     </div>
 
-    <div class="footer__columns__block">
+    <div class="footer__columns__block footer__columns__block--last">
         <p class="onlyP">1 Hashdera St. Zofit, Israel</p>
 
         <a href="tel:+972-9-7415043">+972-9-7415043</a>

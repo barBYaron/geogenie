@@ -44,7 +44,7 @@
 }
 .contactUs__contener__icons a {
   color: #5c6062;
-  border-bottom: #00000000;
+  text-decoration: none;
 }
 .contactUs__contener__icons__box {
   flex-direction: column;

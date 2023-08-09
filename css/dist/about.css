@@ -41,14 +41,6 @@
   margin-top: 35px;
   text-align: left;
 }
-@media only screen and (max-width: 992px) {
-  .leadership__block {
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-  }
-}
 .leadership__block__left {
   height: 100%;
   padding: 60px 120px;

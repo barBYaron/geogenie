@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-bottom: 55px;
+  padding-bottom: 55px !important;
 }
 .WhoIsUsing__items {
   display: flex;
@@ -64,14 +64,18 @@
 .WhoIsUsing__items__box .image .hidden {
   position: absolute;
   top: -15px;
-  left: 0;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.293);
   color: white;
   transition: opacity 0.3s ease;
   width: 100%;
-  height: 100%;
+  display: flex;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  height: 98%;
+  padding: 0 5px;
+  background: rgba(92, 96, 98, 0.7);
 }
 .WhoIsUsing__items__box .image .hidden:hover {
   opacity: 1;
@@ -89,6 +93,7 @@
   background-color: rgba(196, 196, 196, 0.3);
   padding-top: 40px;
   padding-bottom: 40px;
+  height: auto;
 }
 .partnerBenefits__items {
   display: flex;
@@ -98,14 +103,11 @@
   justify-content: space-between;
   max-width: 1200px;
   margin: auto;
-  margin-top: 30px;
-  gap: 20px;
-  padding-bottom: 15px;
+  margin-top: 40px;
 }
 .partnerBenefits__items__box {
   text-align: center;
   width: calc(25% - 20px);
-  height: 175px;
   margin-bottom: 40px;
 }
 .partnerBenefits__items__box__image {
@@ -119,6 +121,7 @@
   padding: 10px;
 }
 .partnerBenefits__items__box__content p {
+  padding: 0 !important;
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -224,14 +227,6 @@
   grid-template-columns: 60% 40%;
   margin-top: 35px;
   text-align: left;
-}
-@media only screen and (max-width: 992px) {
-  .leadership__block {
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-  }
 }
 .leadership__block__left {
   height: 100%;
@@ -396,7 +391,7 @@
 }
 .contactUs__contener__icons a {
   color: #5c6062;
-  border-bottom: #00000000;
+  text-decoration: none;
 }
 .contactUs__contener__icons__box {
   flex-direction: column;
@@ -545,6 +540,9 @@ body {
   align-items: flex-start;
   padding: 20px;
 }
+.secFooter .footer__columns__block--last {
+  padding-top: 0px;
+}
 .secFooter .footer__columns__block--empty {
   padding: 20px 70px 20px 20px;
 }
@@ -563,7 +561,7 @@ body {
   flex-wrap: nowrap;
   color: white;
   align-items: center;
-  padding: 7px 20px 20px 20px;
+  padding: 0px 20px 20px 20px;
   text-decoration: none;
   border-style: solid;
   border-width: 0;
@@ -717,6 +715,7 @@ header {
   margin-left: auto;
   margin-right: auto;
   max-width: 1100px;
+  height: 100%;
   padding: 75px 20px;
 }
 
@@ -778,6 +777,9 @@ header {
   height: 400px;
   background-color: #5c6062;
   padding: 75px 20px;
+  background-size: cover;
+  height: 400px;
+  background-position: 16% 50%;
 }
 .headerPage__conteiner {
   max-width: 1200PX;
@@ -787,7 +789,6 @@ header {
   position: relative;
   top: 2vh;
   color: white;
-  width: 600px;
   height: auto;
   display: flex;
   flex-direction: row;
@@ -800,6 +801,9 @@ header {
 }
 .headerPage__conteiner__taxt p {
   margin: 0px 0px 16px 0px;
+}
+.headerPage--software {
+  background-image: url("https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3-3.jpg");
 }
 
 .products {
@@ -873,15 +877,6 @@ header {
   margin-top: -80px;
   padding: 0 40px;
   display: flex;
-  height: 100%;
-}
-@media only screen and (min-width: 992px) {
-  .products__Block__terra__img {
-    -webkit-box-pack: center;
-    justify-content: center;
-    padding-bottom: 50%;
-    overflow: hidden;
-  }
 }
 .products__Block__terra__img img {
   position: absolute;
@@ -945,9 +940,6 @@ header {
   .WhoIsUsing {
     padding-top: 40px;
   }
-  .WhoIsUsing__items {
-    overflow: scroll;
-  }
   .WhoIsUsing__items__box {
     width: calc(25% - 20px);
   }
@@ -955,9 +947,6 @@ header {
   .mainProducts {
     padding-top: 40px;
     padding-bottom: 40px;
-  }
-  .mainProducts__items {
-    overflow: scroll;
   }
   .mainProducts__items__box {
     width: calc(25% - 20px);
@@ -1012,7 +1001,7 @@ header {
   .products__Block__terra__img {
     -webkit-box-pack: center;
     justify-content: center;
-    padding-bottom: 50%;
+    padding-bottom: 40%;
     overflow: hidden;
   }
   .products__Block__imagse {
@@ -1031,5 +1020,215 @@ header {
 
   .headerHome__contener__taxt {
     width: 75%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .headerHome {
+    height: auto;
+    padding: 0;
+  }
+  .headerHome__contener {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .headerHome__contener__taxt {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .headerHome__contener__taxt__buttons {
+    margin-right: 10px;
+  }
+
+  .headerPage {
+    height: 500px;
+    padding-top: 110px;
+  }
+  .headerPage--software {
+    background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Group-17.jpg) !important;
+  }
+
+  .headline {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .WhoIsUsing {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .WhoIsUsing__items {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow: scroll !important;
+    -webkit-box-pack: start !important;
+    justify-content: flex-start !important;
+  }
+  .WhoIsUsing__items__box {
+    margin: 0 3%;
+    width: calc(40% - 20px) !important;
+  }
+  .WhoIsUsing__items__box--left {
+    margin-left: 18%;
+  }
+
+  .mainProducts {
+    overflow: scroll !important;
+  }
+  .mainProducts__items {
+    padding-right: 0;
+    padding-left: 0;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    -webkit-box-pack: start !important;
+    justify-content: flex-start !important;
+  }
+  .mainProducts__items__box {
+    margin: 0 3%;
+    width: calc(50% - 20px) !important;
+  }
+  .mainProducts__items__box--left {
+    margin-left: 18%;
+  }
+
+  .contactUs__contener {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .contactUs__contener__icons {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactUs__contener__icons__box {
+    font-size: 18px;
+    width: 100%;
+  }
+  .contactUs__contener__icons__box--margin {
+    margin-bottom: 30px;
+  }
+
+  .form__contener__half {
+    width: 100%;
+  }
+  .form__contener__submit button {
+    width: 100%;
+  }
+
+  .headerPage--contact {
+    height: 250px;
+  }
+
+  .secFooter .footer__columns {
+    flex-direction: column;
+  }
+  .secFooter .footer__columns__block {
+    display: flex;
+    align-items: start;
+    width: 100% !important;
+    padding-bottom: 0px;
+    padding-left: 10%;
+  }
+  .secFooter .footer__columns__block--empty {
+    width: 100% !important;
+    -webkit-box-ordinal-group: 5;
+    order: 4;
+  }
+
+  .partnerBenefits__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  .partnerBenefits__items__box {
+    width: 50%;
+  }
+
+  .leadership__block__left {
+    padding: 30px 20px;
+  }
+  .leadership__block__right {
+    padding: 30px 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .WhoIsUsing__items__box {
+    width: calc(35% - 20px) !important;
+  }
+  .WhoIsUsing__items__box--left {
+    margin-left: 10%;
+  }
+
+  .mainProducts {
+    overflow: scroll !important;
+  }
+  .mainProducts__items {
+    padding-right: 0;
+    padding-left: 0;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    -webkit-box-pack: start !important;
+    justify-content: flex-start !important;
+  }
+  .mainProducts__items__box {
+    margin: 0 3%;
+    width: calc(60% - 20px) !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .headerHome {
+    width: 100%;
+    height: auto;
+    background-position: 50% 50%;
+    background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3.jpg);
+    background-size: cover;
+    color: white;
+  }
+  .headerHome__contener {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: justify;
+  }
+
+  .button--readMore {
+    min-width: 40%;
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
+  .button--contactUs {
+    min-width: 40%;
+    margin-bottom: 10px;
+  }
+
+  .WhoIsUsing__items__box {
+    width: calc(28% - 20px) !important;
+  }
+  .WhoIsUsing__items__box--left {
+    margin-left: 8%;
+  }
+
+  .section2__contener__item {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .WhoIsUsing__items__box {
+    margin: 0 1%;
+    width: calc(25% - 20px) !important;
+  }
+  .WhoIsUsing__items__box--left {
+    margin-left: 6%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .mainProducts__items__box {
+    margin: 0 3%;
+    width: calc(80% - 20px) !important;
+  }
+  .mainProducts__items__box--left {
+    margin-left: 16%;
   }
 }
