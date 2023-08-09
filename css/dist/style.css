@@ -129,26 +129,31 @@
 
 .mainProducts__items {
   display: flex;
-  align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
-  margin: auto;
-  margin-top: 35px;
-  gap: 16px;
 }
 .mainProducts__items__box {
-  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: baseline;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
   width: calc(20% - 20px);
-  height: 410px;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
 }
 .mainProducts__items__box__titel {
   width: 100%;
-  height: 115px;
   background-color: #5c6062;
   color: #e3051b;
   text-align: center;
+  margin-bottom: 75px;
 }
 .mainProducts__items__box__titel h3 {
   font-size: 1.2rem;
@@ -159,25 +164,13 @@
 .mainProducts__items__box__titel h3 span {
   color: white;
 }
-.mainProducts__items__box__image {
-  position: relative;
-  top: -50px;
-  width: 100%;
-}
-.mainProducts__items__box__image img {
+.mainProducts__items__box__titel img {
+  object-fit: contain;
+  max-width: 100%;
   height: 120px;
-  margin: auto;
-}
-.mainProducts__items__box__content {
-  position: relative;
-  top: -40px;
-  width: 100%;
-  height: 150px;
-  line-height: 1.6;
+  margin: 0 auto -75px;
 }
 .mainProducts__items__box__learnMore {
-  position: relative;
-  top: -30px;
   background-color: rgba(255, 255, 255, 0);
   border: 2px solid #5c6062;
   color: #5c6062;
@@ -491,40 +484,62 @@ body {
 .secFooter {
   background-color: #5c6062;
   width: 100%;
-  text-align: start;
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
 }
 .secFooter .footer {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 0px 0px 0px;
+  margin: auto;
+  height: 100%;
+}
+.secFooter .footer__columns {
+  display: flex;
+  width: 100%;
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
+  padding-bottom: 20px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
-.secFooter .footer__block {
+.secFooter .footer__columns__block {
   width: 25%;
   display: flex;
   flex-direction: column;
-  padding: 7px 20px 0px 20px;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  padding: 20px;
 }
-.secFooter .footer__block a {
+.secFooter .footer__columns__block--empty {
+  padding: 20px 70px 20px 20px;
+}
+.secFooter .footer__columns__block a {
   transition-duration: 0.3s;
+  cursor: pointer;
 }
-.secFooter .footer__block a:hover {
+.secFooter .footer__columns__block a:hover {
   color: #e3051b;
 }
-.secFooter .footer__block a,
-.secFooter .footer__block p {
+.secFooter .footer__columns__block .onlyP, .secFooter .footer__columns__block a {
   display: flex;
   justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  color: white;
+  align-items: center;
+  padding: 7px 20px 20px 20px;
   text-decoration: none;
   border-style: solid;
   border-width: 0;
-  flex-direction: row;
-  color: white;
-  padding-bottom: 10px;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color, border-color;
+  border-color: transparent;
 }
-.secFooter .footer__block a div,
-.secFooter .footer__block p div {
+.secFooter .footer__columns__block .onlyP div, .secFooter .footer__columns__block a div {
   position: relative;
   top: -5px;
   width: 34px;
@@ -672,9 +687,10 @@ header {
 .headline {
   text-align: center;
   line-height: 1.2;
-  margin-bottom: 20px;
-  height: 33.6px;
+  margin-bottom: 40px;
+  text-align: center;
   width: 100%;
+  font-size: 35px !important;
 }
 .headline h2 {
   font-weight: bold;
@@ -686,7 +702,7 @@ header {
 
 .headlineLeft {
   float: left;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .button {

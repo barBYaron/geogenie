@@ -66,15 +66,17 @@ renderHeader(document.querySelector('#header'));
 
 function renderFooter(root: HTMLElement | null) {
     const footer = `
-    
-    <div class="footer__block"></div>
 
-    <div class="footer__block">
+    <div class="footer__columns">
+    
+    <div class="footer__columns__block footer__columns__block--empty"></div>
+
+    <div class="footer__columns__block">
         <a href="./about.html">ABOUT</a>
         <a href="./hardware.html">PRODUCTS</a>
     </div>
 
-    <div class="footer__block">
+    <div class="footer__columns__block">
         <a href="http://www.facebook.com/profile.php?id=100089896091480">
             <div></div>
             Facebook
@@ -91,12 +93,13 @@ function renderFooter(root: HTMLElement | null) {
         </a>
     </div>
 
-    <div class="footer__block">
-        <p>1 Hashdera St. Zofit, Israel</p>
+    <div class="footer__columns__block">
+        <p class="onlyP">1 Hashdera St. Zofit, Israel</p>
 
         <a href="tel:+972-9-7415043">+972-9-7415043</a>
 
         <p><a href="mailto:info@geo-genie.co.il">info@geo-genie.co.il</a></p>
+    </div>
     </div>`;
 
     if (root) {
