@@ -29,23 +29,23 @@ function renderHeader(root: HTMLElement | null) {
           <div class="header__container__right__label__line"></div>
       </div>
 
-      <div class="header__container__right__label hardware">
+      <div class="header__container__right__label hardware" onmouseover="showUl()" onmouseout="hideUl()">
           <a href="./hardware.html">HARDWARE
               <div class="click"> > </div>
          </a>
          <div class="header__container__right__label__line"></div>
          
          <ul>
-          <li>
-              <a href="/">TerraGenie PRO</a>
-          </li>
-          <li>
-              <a href="/">TerraGenie NX</a>
-          </li>
-          <li>
-              <a href="/">TerraGenie TAB</a>
-          </li>
-         </ul>
+         <li>
+             <a href="/hardware.html#TerraGeniePRO">TerraGenie PRO</a>
+         </li>
+         <li>
+             <a href="/hardware.html#TerraGenieNX">TerraGenie NX</a>
+         </li>
+         <li>
+             <a href="/hardware.html#GeoGeneiTAB">TerraGenie TAB</a>
+         </li>
+        </ul>
 
       </div>
 
@@ -109,3 +109,20 @@ function renderFooter(root: HTMLElement | null) {
     }
 }
 renderFooter(document.querySelector('#footer'));
+
+function showUl() {
+    const ul = document.querySelector('ul');
+
+    if (ul) {
+        ul.style.opacity = '1';
+    }
+}
+
+
+function hideUl() {
+    const ul = document.querySelector('ul');
+
+    if (ul) {
+        ul.style.opacity = '0';
+    }
+} 

@@ -483,7 +483,7 @@
 
 * {
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 body {
@@ -635,18 +635,28 @@ header {
   max-width: 1200px;
   padding: 0px 20px;
   height: 100%;
-  margin: auto;
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: stretch;
+  margin-left: auto;
+  margin-right: auto;
 }
 .header__container__left {
   justify-content: flex-start;
   display: flex;
   align-items: center;
 }
-.header__container__left img {
+.header__container__left a {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  text-decoration: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header__container__left a img {
   height: 40px;
   max-width: 100%;
 }
@@ -657,19 +667,16 @@ header {
   align-items: center;
 }
 .header__container__right {
+  display: flex;
   justify-content: flex-end;
-  display: flex;
   align-items: center;
-  display: flex;
   flex-direction: row;
-  align-items: center;
   flex-wrap: nowrap;
   transition-property: opacity, transform, visibility;
 }
 .header__container__right__label {
   padding: 0px 20px;
   font-size: 1.2rem;
-  font-weight: 700;
   cursor: pointer;
 }
 .header__container__right__label a {
@@ -694,7 +701,7 @@ header {
   opacity: 0;
 }
 .header__container__right__label ul {
-  transition-duration: 4s;
+  transition-duration: s;
   padding: 0;
   flex-direction: column;
   white-space: nowrap;
@@ -703,12 +710,24 @@ header {
   z-index: 999;
   margin: auto;
   top: 100%;
-  display: none;
+  opacity: 0;
 }
 .header__container__right__label ul li {
+  position: relative;
+  flex-direction: column;
   background-color: white;
-  width: 158px;
-  height: 53px;
+  color: #5c6062;
+  font-size: 0.9rem;
+  list-style-type: none;
+  display: flex;
+  font-weight: 700;
+}
+.header__container__right__label ul li a {
+  padding: 15px 20px;
+}
+.header__container__right__label ul li a:hover {
+  background-color: #e3051b;
+  color: white !important;
 }
 
 .wrapper {
@@ -734,10 +753,8 @@ header {
 .headline h2 span {
   color: #e3051b;
 }
-
-.headlineLeft {
-  float: left;
-  margin-bottom: 40px;
+.headline--left {
+  text-align: left;
 }
 
 .button {
@@ -772,28 +789,27 @@ header {
 }
 
 .headerPage {
-  position: relative;
   width: 100%;
   height: 400px;
-  background-color: #5c6062;
   padding: 75px 20px;
   background-size: cover;
-  height: 400px;
-  background-position: 16% 50%;
+  background-position: 50% 50%;
+  background-repeat: repeat;
 }
 .headerPage__conteiner {
-  max-width: 1200PX;
+  max-width: 1200px;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 75px 20px;
 }
 .headerPage__conteiner__taxt {
-  position: relative;
-  top: 2vh;
-  color: white;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   text-align: left;
+  max-width: 60%;
+  width: 100%;
+  color: white;
 }
 .headerPage__conteiner__taxt h1 {
   font-size: 35px;
@@ -802,8 +818,17 @@ header {
 .headerPage__conteiner__taxt p {
   margin: 0px 0px 16px 0px;
 }
+.headerPage--about {
+  background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3-1-scaled.jpg);
+}
 .headerPage--software {
   background-image: url("https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3-3.jpg");
+}
+.headerPage--hardware {
+  background-image: url("https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3-3.jpg");
+}
+.headerPage--contact {
+  background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3-5.jpg);
 }
 
 .products {
@@ -813,7 +838,7 @@ header {
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 .products__Block--opposite {
   flex-direction: row;
@@ -825,7 +850,7 @@ header {
 }
 .products__Block__terra__content {
   box-align: end;
-  align-items: end;
+  align-items: flex-end;
   text-align: right;
   background-color: #576067;
   padding: 20px 40px 100px;
@@ -871,21 +896,21 @@ header {
   text-align: left;
 }
 .products__Block__terra__img {
-  position: relative;
   padding-bottom: 70%;
   justify-content: flex-end;
   margin-top: -80px;
   padding: 0 40px;
   display: flex;
+  -webkit-box-pack: end;
 }
 .products__Block__terra__img img {
-  position: absolute;
   object-fit: contain;
   object-position: top;
-  z-index: 1;
+  z-index: 3;
   width: auto;
   height: 100%;
   max-width: 350px;
+  aspect-ratio: auto 768/597;
 }
 .products__Block__terra__img--opposite {
   justify-content: flex-start;
@@ -901,14 +926,6 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   -webkit-box-pack: justify;
-}
-@media only screen and (min-width: 992px) {
-  .products__Block__imagse {
-    width: 100%;
-    margin-top: 0;
-    margin-right: 0%;
-    margin-left: 0%;
-  }
 }
 .products__Block__imagse--opposite {
   margin-left: -10%;
@@ -1048,6 +1065,15 @@ header {
   }
   .headerPage--software {
     background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Group-17.jpg) !important;
+  }
+  .headerPage--hardware {
+    background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Group-17.jpg) !important;
+  }
+  .headerPage--about {
+    background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Group-16.jpg) !important;
+  }
+  .headerPage--contact {
+    background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3-2.jpg) !important;
   }
 
   .headline {

@@ -6,7 +6,7 @@
 
 * {
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 body {
@@ -162,7 +162,6 @@ button {
 }
 
 header {
-    // position: relative;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -173,8 +172,6 @@ header {
 }
 
 .header {
-    // position: sticky;
-    // top: 0;
     width: 100%;
     display: block;
 
@@ -182,20 +179,31 @@ header {
         max-width: 1200px;
         padding: 0px 20px;
         height: 100%;
-        margin: auto;
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-start;
         align-items: stretch;
+        margin-left: auto;
+        margin-right: auto;
 
         &__left {
             justify-content: flex-start;
             display: flex;
             align-items: center;
 
-            img {
-                height: 40px;
-                max-width: 100%;
+            a {
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+                text-decoration: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    height: 40px;
+                    max-width: 100%;
+                }
             }
         }
 
@@ -207,20 +215,16 @@ header {
         }
 
         &__right {
+            display: flex;
             justify-content: flex-end;
-            display: flex;
             align-items: center;
-            display: flex;
             flex-direction: row;
-            align-items: center;
-            // width: 100%;
             flex-wrap: nowrap;
             transition-property: opacity, transform, visibility;
 
             &__label {
                 padding: 0px 20px;
                 font-size: 1.2rem;
-                font-weight: 700;
                 cursor: pointer;
 
                 a {
@@ -250,7 +254,7 @@ header {
                 }
 
                 ul {
-                    transition-duration: 4s;
+                    transition-duration: s;
                     padding: 0;
                     flex-direction: column;
                     white-space: nowrap;
@@ -259,12 +263,27 @@ header {
                     z-index: 999;
                     margin: auto;
                     top: 100%;
-                    display: none;
+                    opacity: 0;
 
                     li {
+                        position: relative;
+                        flex-direction: column;
                         background-color: white;
-                        width: 158px;
-                        height: 53px;
+                        color: #5c6062;
+                        font-size: 0.9rem;
+                        list-style-type: none;
+                        display: flex;
+                        font-weight: 700;
+
+                        a {
+                            padding: 15px 20px;
+
+                            &:hover {
+                                background-color: #e3051b;
+                                color: white !important;
+                            }
+                        }
+
                     }
                 }
             }
@@ -285,7 +304,6 @@ header {
     line-height: 1.2;
     margin-bottom: 40px;
     text-align: center;
-    // height: 33.6px;
     width: 100%;
     font-size: 35px !important;
 
@@ -297,12 +315,15 @@ header {
             color: #e3051b;
         }
     }
+
+    &--left {
+        text-align: left;
+    }
 }
 
-.headlineLeft {
-    float: left;
-    margin-bottom: 40px;
-}
+// .headlineLeft {
+//     float: left !important;
+// }
 
 .button {
     font-size: 18px;
@@ -344,31 +365,28 @@ header {
 }
 
 .headerPage {
-    position: relative;
     width: 100%;
     height: 400px;
-    background-color: #5c6062;
     padding: 75px 20px;
     background-size: cover;
-    height: 400px;
-    // background-position: 50% 50%;
-    background-position: 16% 50%;
+    // background-position: 16% 50%;
+    background-position: 50% 50%;
+    background-repeat: repeat;
 
     &__conteiner {
-        max-width: 1200PX;
+        max-width: 1200px;
         margin: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 75px 20px;
 
         &__taxt {
-            position: relative;
-            top: 2vh;
-            color: white;
-            // margin-left: 18%;
-            // width: 600px;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
             text-align: left;
+            max-width: 60%;
+            width: 100%;
+            color: white;
 
             h1 {
                 font-size: 35px;
@@ -382,22 +400,34 @@ header {
 
     }
 
+    &--about {
+        background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3-1-scaled.jpg);
+    }
+
     &--software {
         background-image: url('https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3-3.jpg');
+    }
+
+    &--hardware {
+        background-image: url('https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3-3.jpg');
+    }
+
+    &--contact {
+        background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3-5.jpg);
     }
 }
 
 
 .products {
-    // position: relative;
-    // max-width: 1160px;
     width: 100%;
 
     &__Block {
         width: 100%;
         display: flex;
         flex-direction: row-reverse;
-        margin-bottom: 50px;
+        margin-bottom: 60px;
+        // -webkit-box-orient: horizontal;
+        // -webkit-box-direction: reverse;
 
         &--opposite {
             flex-direction: row;
@@ -410,22 +440,18 @@ header {
 
             &__content {
                 box-align: end;
-                align-items: end;
+                align-items: flex-end;
                 text-align: right;
                 background-color: rgba(87, 96, 103, 1);
                 padding: 20px 40px 100px;
                 display: flex;
                 flex-direction: column;
                 color: white;
+                // -webkit-box-align: end;
+                // -webkit-box-orient: vertical;
+                // -webkit-box-direction: normal;
 
                 &__title {
-                    // position: relative;
-                    // top: -30px;
-                    // display: block;
-                    // margin-block-start: 1em;
-                    // margin-block-end: 1em;
-                    // margin-inline-start: 0px;
-                    // margin-inline-end: 0px;
                     font-size: 35px;
                     font-weight: 700;
                     line-height: 1.2;
@@ -442,15 +468,8 @@ header {
                 }
 
                 &__p {
-                    // position: relative;
-                    // width: 90%;
-                    // top: -70px;
                     display: block;
                     margin-bottom: 20px;
-                    // margin-block-start: 1em;
-                    // margin-block-end: 1em;
-                    // margin-inline-start: 0px;
-                    // margin-inline-end: 0px;
 
                     p {
                         margin: 0;
@@ -479,23 +498,23 @@ header {
             }
 
             &__img {
-                position: relative;
+                // position: relative;
                 padding-bottom: 70%;
                 justify-content: flex-end;
                 margin-top: -80px;
                 padding: 0 40px;
                 display: flex;
-                // height: 100%;
+                -webkit-box-pack: end;
 
                 img {
-                    position: absolute;
+                    // position: absolute;
                     object-fit: contain;
                     object-position: top;
-                    z-index: 1;
+                    z-index: 3;
                     width: auto;
                     height: 100%;
                     max-width: 350px;
-                    // aspect-ratio: auto 768 / 597;
+                    aspect-ratio: auto 768 / 597;
                 }
 
                 &--opposite {
@@ -516,13 +535,6 @@ header {
             flex-wrap: wrap;
             justify-content: space-between;
             -webkit-box-pack: justify;
-
-            @media only screen and (min-width: 992px) {
-                width: 100%;
-                margin-top: 0;
-                margin-right: 0%;
-                margin-left: 0%;
-            }
 
             &--opposite {
                 margin-left: -10%;
@@ -653,8 +665,16 @@ header {
                     justify-content: center;
                     padding-bottom: 40%;
                     overflow: hidden;
-                }
 
+                //     &--last {
+                //     //     height: 800px;
+                //     //     margin-top: -50px;
+                //     //     padding-bottom: 40%;
+                //    img {
+                //     height: 100%;
+                //    }
+                //     }
+                }
             }
 
             &__imagse {
@@ -682,7 +702,6 @@ header {
     }
 }
 
-// -768, home,contact, footer, hadline.
 @media only screen and (max-width: 767px) {
     .headerHome {
         height: auto;
@@ -713,6 +732,18 @@ header {
 
         &--software {
             background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Group-17.jpg) !important;
+        }
+
+        &--hardware {
+            background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Group-17.jpg) !important;
+        }
+
+        &--about {
+            background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Group-16.jpg) !important;
+        }
+
+        &--contact {
+            background-image: url(https://geo-genie.co.il/wp-content/uploads/2022/03/Rectangle-3-2.jpg) !important;
         }
     }
 
@@ -852,12 +883,12 @@ header {
     .leadership {
 
         &__block {
-         
-    
+
+
             &__left {
-              padding: 30px 20px;
+                padding: 30px 20px;
             }
-    
+
             &__right {
                 padding: 30px 20px;
             }
@@ -963,15 +994,13 @@ header {
     }
 
     .section2 {
-    
+
         &__contener {
-    
+
             &__item {
                 width: 100%;
-    
-                &__icon {
-                   
-                }
+
+                &__icon {}
             }
         }
     }
@@ -1003,9 +1032,10 @@ header {
             &__box {
                 margin: 0 3%;
                 width: calc(80% - 20px) !important;
-            &--left {
-                margin-left: 16%;
-            }
+
+                &--left {
+                    margin-left: 16%;
+                }
             }
         }
     }

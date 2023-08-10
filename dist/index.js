@@ -1,5 +1,5 @@
 function renderHeader(root) {
-    var header = "\n  <div class=\"header__container\">\n\n  <div class=\"header__container__left\">\n      <a href=\"./index.html\">\n          <img src=\"https://geo-genie.co.il/wp-content/uploads/2023/01/TerraGenie_Logo-removebg-preview-768x129.png\"\n              alt=\"\">\n      </a>\n  </div>\n\n  <div class=\"header__container__empty\"></div>\n\n  <div class=\"header__container__right\">\n\n      <div class=\"header__container__right__label\">\n          <a href=\"./index.html\">HOME</a>\n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n      <div class=\"header__container__right__label\">\n          <a href=\"./about.html\">ABOUT</a>\n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n      <div class=\"header__container__right__label\">\n          <a href=\"./software.html\">SOFTWARE</a>\n          \n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n      <div class=\"header__container__right__label hardware\">\n          <a href=\"./hardware.html\">HARDWARE\n              <div class=\"click\"> > </div>\n         </a>\n         <div class=\"header__container__right__label__line\"></div>\n         \n         <ul>\n          <li>\n              <a href=\"/\">TerraGenie PRO</a>\n          </li>\n          <li>\n              <a href=\"/\">TerraGenie NX</a>\n          </li>\n          <li>\n              <a href=\"/\">TerraGenie TAB</a>\n          </li>\n         </ul>\n\n      </div>\n\n      <div class=\"header__container__right__label\">\n          <a href=\"./contact.html\">CONTACT</a>\n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n  </div>\n\n</div>";
+    var header = "\n  <div class=\"header__container\">\n\n  <div class=\"header__container__left\">\n      <a href=\"./index.html\">\n          <img src=\"https://geo-genie.co.il/wp-content/uploads/2023/01/TerraGenie_Logo-removebg-preview-768x129.png\"\n              alt=\"\">\n      </a>\n  </div>\n\n  <div class=\"header__container__empty\"></div>\n\n  <div class=\"header__container__right\">\n\n      <div class=\"header__container__right__label\">\n          <a href=\"./index.html\">HOME</a>\n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n      <div class=\"header__container__right__label\">\n          <a href=\"./about.html\">ABOUT</a>\n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n      <div class=\"header__container__right__label\">\n          <a href=\"./software.html\">SOFTWARE</a>\n          \n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n      <div class=\"header__container__right__label hardware\" onmouseover=\"showUl()\" onmouseout=\"hideUl()\">\n          <a href=\"./hardware.html\">HARDWARE\n              <div class=\"click\"> > </div>\n         </a>\n         <div class=\"header__container__right__label__line\"></div>\n         \n         <ul>\n         <li>\n             <a href=\"/hardware.html#TerraGeniePRO\">TerraGenie PRO</a>\n         </li>\n         <li>\n             <a href=\"/hardware.html#TerraGenieNX\">TerraGenie NX</a>\n         </li>\n         <li>\n             <a href=\"/hardware.html#GeoGeneiTAB\">TerraGenie TAB</a>\n         </li>\n        </ul>\n\n      </div>\n\n      <div class=\"header__container__right__label\">\n          <a href=\"./contact.html\">CONTACT</a>\n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n  </div>\n\n</div>";
     if (root) {
         root.innerHTML = header;
     }
@@ -12,3 +12,15 @@ function renderFooter(root) {
     }
 }
 renderFooter(document.querySelector('#footer'));
+function showUl() {
+    var ul = document.querySelector('ul');
+    if (ul) {
+        ul.style.opacity = '1';
+    }
+}
+function hideUl() {
+    var ul = document.querySelector('ul');
+    if (ul) {
+        ul.style.opacity = '0';
+    }
+}
