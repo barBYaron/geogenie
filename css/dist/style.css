@@ -626,6 +626,12 @@ header {
   background-color: white;
   box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.2);
 }
+@media only screen and (max-width: 991px) {
+  header {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
 
 .header {
   width: 100%;
@@ -641,6 +647,11 @@ header {
   align-items: stretch;
   margin-left: auto;
   margin-right: auto;
+}
+@media only screen and (max-width: 991px) {
+  .header__container {
+    padding-right: 5px;
+  }
 }
 .header__container__left {
   justify-content: flex-start;
@@ -666,6 +677,23 @@ header {
   display: flex;
   align-items: center;
 }
+.header__container__menuMobile {
+  transition-duration: 0.4s;
+  padding: 15px;
+  cursor: pointer;
+  z-index: 3;
+}
+@media only screen and (min-width: 992px) {
+  .header__container__menuMobile {
+    transition-duration: 0.3s;
+    display: inline-flex;
+  }
+  .header__container__menuMobile i {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+  }
+}
 .header__container__right {
   display: flex;
   justify-content: flex-end;
@@ -673,6 +701,12 @@ header {
   flex-direction: row;
   flex-wrap: nowrap;
   transition-property: opacity, transform, visibility;
+}
+@media only screen and (max-width: 991px) {
+  .header__container__right {
+    visibility: hidden;
+    position: fixed;
+  }
 }
 .header__container__right__label {
   padding: 0px 20px;
@@ -711,6 +745,12 @@ header {
   margin: auto;
   top: 100%;
   opacity: 0;
+}
+@media only screen and (max-width: 991px) {
+  .header__container__right__label ul {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 .header__container__right__label ul li {
   position: relative;
@@ -1084,11 +1124,11 @@ header {
   .WhoIsUsing {
     padding-right: 0;
     padding-left: 0;
+    overflow: scroll !important;
   }
   .WhoIsUsing__items {
     display: flex !important;
     flex-wrap: nowrap !important;
-    overflow: scroll !important;
     -webkit-box-pack: start !important;
     justify-content: flex-start !important;
   }

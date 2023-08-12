@@ -11,7 +11,15 @@ function renderHeader(root: HTMLElement | null) {
 
   <div class="header__container__empty"></div>
 
+  
+  <div class="header__container__menuMobile" onmouseover="showMenu()">
+  <i class="fas fa-bars">O</i>
+  </div>
+
+
   <div class="header__container__right">
+
+
 
       <div class="header__container__right__label">
           <a href="./index.html">HOME</a>
@@ -126,3 +134,11 @@ function hideUl() {
         ul.style.opacity = '0';
     }
 } 
+
+function showMenu() {
+    const menu = document.querySelector('ul');
+
+    if (menu) {
+        menu.style.visibility = 'visible';
+    }
+}

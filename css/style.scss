@@ -169,6 +169,11 @@ header {
     display: block;
     background-color: white;
     box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.2);
+
+    @media only screen and (max-width: 991px) {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
 }
 
 .header {
@@ -185,6 +190,10 @@ header {
         align-items: stretch;
         margin-left: auto;
         margin-right: auto;
+
+        @media only screen and (max-width: 991px) {
+            padding-right: 5px;
+        }
 
         &__left {
             justify-content: flex-start;
@@ -214,6 +223,27 @@ header {
             align-items: center;
         }
 
+        
+        &__menuMobile {
+            transition-duration: 0.4s;
+            padding: 15px;
+            // display: none;
+            cursor: pointer;
+            z-index: 3;
+
+
+            @media only screen and (min-width: 992px) {
+                transition-duration: 0.3s;
+                display: inline-flex;
+
+                i {
+                    width: 30px;
+                    height: 30px;
+                    fill: currentColor;
+                }
+            }
+        }
+
         &__right {
             display: flex;
             justify-content: flex-end;
@@ -221,6 +251,12 @@ header {
             flex-direction: row;
             flex-wrap: nowrap;
             transition-property: opacity, transform, visibility;
+
+            @media only screen and (max-width: 991px) {
+                visibility: hidden;
+                position: fixed;
+                
+            }
 
             &__label {
                 padding: 0px 20px;
@@ -264,6 +300,11 @@ header {
                     margin: auto;
                     top: 100%;
                     opacity: 0;
+
+                    @media only screen and (max-width: 991px) {
+                        flex-direction: row;
+                        align-items: center;
+                    }
 
                     li {
                         position: relative;
@@ -666,14 +707,14 @@ header {
                     padding-bottom: 40%;
                     overflow: hidden;
 
-                //     &--last {
-                //     //     height: 800px;
-                //     //     margin-top: -50px;
-                //     //     padding-bottom: 40%;
-                //    img {
-                //     height: 100%;
-                //    }
-                //     }
+                    //     &--last {
+                    //     //     height: 800px;
+                    //     //     margin-top: -50px;
+                    //     //     padding-bottom: 40%;
+                    //    img {
+                    //     height: 100%;
+                    //    }
+                    //     }
                 }
             }
 
@@ -755,11 +796,13 @@ header {
     .WhoIsUsing {
         padding-right: 0;
         padding-left: 0;
+        overflow: scroll !important;
+
 
         &__items {
             display: flex !important;
             flex-wrap: nowrap !important;
-            overflow: scroll !important;
+            // overflow: scroll !important;
             -webkit-box-pack: start !important;
             justify-content: flex-start !important;
 
