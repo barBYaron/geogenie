@@ -615,6 +615,7 @@ button {
 }
 
 header {
+  user-select: none;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -623,7 +624,7 @@ header {
   background-color: white;
   box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.2);
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 992px) {
   header {
     padding-top: 0px;
     padding-bottom: 0px;
@@ -684,12 +685,13 @@ header {
 .header__container__menuMobile {
   transition-duration: 0.4s;
   padding: 15px;
+  display: block;
   cursor: pointer;
   z-index: 3;
 }
 @media only screen and (min-width: 992px) {
   .header__container__menuMobile {
-    display: block !important;
+    display: none !important;
   }
   .header__container__menuMobile i {
     width: 30px;
@@ -774,20 +776,22 @@ header {
   display: none;
 }
 
-.show {
-  width: 100%;
+#menuForMobile {
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
   height: 100vh;
   overflow: auto;
   background-color: white;
   padding: 20px;
   align-items: flex-start;
   flex-direction: column;
-  display: flex;
+  display: none;
 }
-.show .hardware:hover .mobile {
+#menuForMobile .hardware:hover .mobile {
   opacity: 1;
 }
-.show a {
+#menuForMobile a {
   text-decoration: none;
   border-style: solid;
   border-width: 0;
@@ -797,7 +801,7 @@ header {
   color: #5c6062;
   display: flex;
 }
-.show__line {
+#menuForMobile__line {
   width: 30px;
   height: 5px;
   margin: auto;
@@ -805,7 +809,7 @@ header {
   border-radius: 40px;
   opacity: 0;
 }
-.show__label {
+#menuForMobile__label {
   flex-direction: column;
   width: 40%;
   text-align: center;
@@ -816,7 +820,7 @@ header {
   padding-top: 10px;
   padding-left: 0px;
 }
-.show .mobile {
+#menuForMobile .mobile {
   padding: 0;
   flex-direction: column;
   white-space: nowrap;
@@ -827,12 +831,20 @@ header {
   opacity: 0;
   background-color: white;
 }
-.show .mobile li {
+#menuForMobile .mobile li {
   list-style-type: none;
 }
-.show .mobile li:hover {
+#menuForMobile .mobile li:hover {
   background-color: #e3051b;
   color: white !important;
+}
+
+.display {
+  display: flex !important;
+}
+
+.hide {
+  display: none !important;
 }
 
 .wrapper {

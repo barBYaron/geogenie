@@ -1,6 +1,15 @@
 // <a href="/hardware.html#TerraGeniePRO">TerraGeniePRO</a>
 //<a href="/hardware.html#TerraGenieNX">TerraGenie NX</a>
 // <a href="/hardware.html#GeoGeneiTAB">TerraGenie TAB</a>
+interface Settings{
+    showMenu: boolean;
+}
+
+const settings:Settings = {
+    showMenu: false
+}
+
+
 
 function renderHeader(root: HTMLElement | null) {
     const header = `
@@ -15,8 +24,8 @@ function renderHeader(root: HTMLElement | null) {
 
   <div class="header__container__empty"></div>
 
-  <div class="header__container__menuMobile" onclick="showMenu()">
-  <i class="fas fa-bars">O</i> </div>
+  <div class="header__container__menuMobile" onclick="toggleMenu()">
+  <i class="fas fa-bars">${settings.showMenu?"X":"O"}</i> </div>
 
   <div class="header__container__right">
 
@@ -74,8 +83,6 @@ renderHeader(document.querySelector('#header'));
 
 function renderMobileMenu(root: HTMLElement | null) {
     const mobileMenu = `
-    <div class="forMobile">
-
     <div class="forMobile__label" id="index">
         <a href="./index.html">HOME</a>
         <div class="forMobile__label__line"></div>
@@ -115,15 +122,13 @@ function renderMobileMenu(root: HTMLElement | null) {
     <div class="forMobile__label" id="contact">
         <a href="./contact.html">CONTACT</a>
         <div class="forMobile__label__line"></div>
-    </div>
-
-</div>`
+    </div>`
 
     if (root) {
         root.innerHTML = mobileMenu;
     }
 }
-renderMobileMenu(document.querySelector('#mobileMenu'));
+renderMobileMenu(document.querySelector('#menuForMobile'));
 
 
 function renderFooter(root: HTMLElement | null) {
@@ -240,10 +245,19 @@ function hendleScroll(elementId: string) {
     }
 }
 
-function showMenu() {
-    const menu = document.querySelector('.forMobile');
-
-    if (menu) {
-        menu.classList.toggle('show');
+function toggleMenu() {
+    console.log('toggleMenu')
+    const menu = document.querySelector('#menuForMobile');
+    if (menu?.classList.contains('display')) {
+        menu.classList.remove('display');
+        menu.classList.add('hide');
+        settings.showMenu = false;
+        document.body.style.overflow = 'auto';
+    } else {
+        menu?.classList.remove('hide');
+        menu?.classList.add('display');
+        settings.showMenu = true;
+        document.body.style.overflow = 'hidden';
     }
+    renderHeader(document.querySelector('#header'));
 }

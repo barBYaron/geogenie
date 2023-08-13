@@ -1,3 +1,5 @@
+$mobileWidth:992px;
+
 @import 'home.scss';
 @import 'about.scss';
 @import 'software.scss';
@@ -151,6 +153,7 @@ button {
 }
 
 header {
+    user-select: none;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -159,7 +162,7 @@ header {
     background-color: white;
     box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.2);
 
-    @media only screen and (max-width: 991px) {
+    @media only screen and (max-width: $mobileWidth) {
         padding-top: 0px;
         padding-bottom: 0px;
     }
@@ -226,13 +229,13 @@ header {
         &__menuMobile {
             transition-duration: 0.4s;
             padding: 15px;
-            // display: none;
+            display: block;
             cursor: pointer;
             z-index: 3;
 
 
             @media only screen and (min-width: 992px) {
-                display: block !important;
+                display: none !important;
 
                 i {
                     width: 30px;
@@ -341,8 +344,13 @@ header {
     display: none;
 }
 
-.show {
-    width: 100%;
+
+
+#menuForMobile {
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+
     height: 100vh;
     overflow: auto;
     background-color: white;
@@ -350,11 +358,12 @@ header {
     align-items: flex-start;
     // justify-content: center;
     flex-direction: column;
-    display: flex;
-    // display: none;
 
-    // @media only screen and (min-width: 992px) {
-    // }
+    display: none;
+
+
+
+   
 
     .hardware {
         &:hover {
@@ -416,6 +425,14 @@ header {
             }
         }
     }
+}
+
+.display{
+    display: flex !important;
+}
+.hide{
+    display: none !important;
+    
 }
 
 

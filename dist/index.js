@@ -1,20 +1,20 @@
-// <a href="/hardware.html#TerraGeniePRO">TerraGeniePRO</a>
-//<a href="/hardware.html#TerraGenieNX">TerraGenie NX</a>
-// <a href="/hardware.html#GeoGeneiTAB">TerraGenie TAB</a>
+var settings = {
+    showMenu: false
+};
 function renderHeader(root) {
-    var header = "\n  <div class=\"header__container\">\n\n  <div class=\"header__container__left\">\n      <a href=\"./index.html\">\n          <img src=\"https://geo-genie.co.il/wp-content/uploads/2023/01/TerraGenie_Logo-removebg-preview-768x129.png\"\n              alt=\"\">\n      </a>\n  </div>\n\n  <div class=\"header__container__empty\"></div>\n\n  <div class=\"header__container__menuMobile\" onclick=\"showMenu()\">\n  <i class=\"fas fa-bars\">O</i> </div>\n\n  <div class=\"header__container__right\">\n\n      <div class=\"header__container__right__label\"  id=\"index\">\n          <a href=\"./index.html\">HOME</a>\n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n      <div class=\"header__container__right__label\"  id=\"about\">\n          <a href=\"./about.html\">ABOUT</a>\n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n      <div class=\"header__container__right__label\" id=\"software\">\n          <a href=\"./software.html\">SOFTWARE</a>\n          \n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n      <div class=\"header__container__right__label hardware\" onmouseover=\"showUl()\" onmouseout=\"hideUl()\" id=\"hardware\">\n          <a href=\"./hardware.html\">HARDWARE\n              <div class=\"click\"> > </div>\n         </a>\n         <div class=\"header__container__right__label__line\" ></div>\n         \n         <ul>\n         <li onclick=\"hendleScroll('TerraGeniePRO')\">\n             TerraGenie PRO\n         </li>\n         <li onclick=\"hendleScroll('TerraGenieNX')\">\n             TerraGenie NX\n         </li>\n         <li onclick=\"hendleScroll('GeoGeneiTAB')\">\n             TerraGenie TAB\n         </li>\n        </ul>\n\n      </div>\n\n      <div class=\"header__container__right__label\" id=\"contact\">\n          <a href=\"./contact.html\">CONTACT</a>\n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n  </div>\n\n</div>";
+    var header = "\n  <div class=\"header__container\">\n\n  <div class=\"header__container__left\">\n      <a href=\"./index.html\">\n          <img src=\"https://geo-genie.co.il/wp-content/uploads/2023/01/TerraGenie_Logo-removebg-preview-768x129.png\"\n              alt=\"\">\n      </a>\n  </div>\n\n  <div class=\"header__container__empty\"></div>\n\n  <div class=\"header__container__menuMobile\" onclick=\"toggleMenu()\">\n  <i class=\"fas fa-bars\">" + (settings.showMenu ? "X" : "O") + "</i> </div>\n\n  <div class=\"header__container__right\">\n\n      <div class=\"header__container__right__label\"  id=\"index\">\n          <a href=\"./index.html\">HOME</a>\n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n      <div class=\"header__container__right__label\"  id=\"about\">\n          <a href=\"./about.html\">ABOUT</a>\n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n      <div class=\"header__container__right__label\" id=\"software\">\n          <a href=\"./software.html\">SOFTWARE</a>\n          \n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n      <div class=\"header__container__right__label hardware\" onmouseover=\"showUl()\" onmouseout=\"hideUl()\" id=\"hardware\">\n          <a href=\"./hardware.html\">HARDWARE\n              <div class=\"click\"> > </div>\n         </a>\n         <div class=\"header__container__right__label__line\" ></div>\n         \n         <ul>\n         <li onclick=\"hendleScroll('TerraGeniePRO')\">\n             TerraGenie PRO\n         </li>\n         <li onclick=\"hendleScroll('TerraGenieNX')\">\n             TerraGenie NX\n         </li>\n         <li onclick=\"hendleScroll('GeoGeneiTAB')\">\n             TerraGenie TAB\n         </li>\n        </ul>\n\n      </div>\n\n      <div class=\"header__container__right__label\" id=\"contact\">\n          <a href=\"./contact.html\">CONTACT</a>\n          <div class=\"header__container__right__label__line\"></div>\n      </div>\n\n  </div>\n\n</div>";
     if (root) {
         root.innerHTML = header;
     }
 }
 renderHeader(document.querySelector('#header'));
 function renderMobileMenu(root) {
-    var mobileMenu = "\n    <div class=\"forMobile\">\n\n    <div class=\"forMobile__label\" id=\"index\">\n        <a href=\"./index.html\">HOME</a>\n        <div class=\"forMobile__label__line\"></div>\n    </div>\n\n    <div class=\"forMobile__label\" id=\"about\">\n        <a href=\"./about.html\">ABOUT</a>\n        <div class=\"forMobile__label__line\"></div>\n    </div>\n\n    <div class=\"forMobile__label\" id=\"software\">\n        <a href=\"./software.html\">SOFTWARE</a>\n\n        <div class=\"forMobile__label__line\"></div>\n    </div>\n\n    <div class=\"forMobile__label hardware\" onmouseover=\"showUl()\" onmouseout=\"hideUl()\" id=\"hardware\">\n        <a href=\"./hardware.html\">HARDWARE\n            <div class=\"click\"> > </div>\n        </a>\n        <div class=\"forMobile__label__line\"></div>\n\n        <ul class=\"mobile\">\n            <li onclick=\"hendleScroll('TerraGeniePRO')\">\n                TerraGenie PRO\n            </li>\n            <li onclick=\"hendleScroll('TerraGenieNX')\">\n                TerraGenie NX\n            </li>\n            <li onclick=\"hendleScroll('GeoGeneiTAB')\">\n                TerraGenie TAB\n            </li>\n        </ul>\n\n    </div>\n\n    <div class=\"forMobile__label\" id=\"contact\">\n        <a href=\"./contact.html\">CONTACT</a>\n        <div class=\"forMobile__label__line\"></div>\n    </div>\n\n</div>";
+    var mobileMenu = "\n    <div class=\"forMobile__label\" id=\"index\">\n        <a href=\"./index.html\">HOME</a>\n        <div class=\"forMobile__label__line\"></div>\n    </div>\n\n    <div class=\"forMobile__label\" id=\"about\">\n        <a href=\"./about.html\">ABOUT</a>\n        <div class=\"forMobile__label__line\"></div>\n    </div>\n\n    <div class=\"forMobile__label\" id=\"software\">\n        <a href=\"./software.html\">SOFTWARE</a>\n\n        <div class=\"forMobile__label__line\"></div>\n    </div>\n\n    <div class=\"forMobile__label hardware\" onmouseover=\"showUl()\" onmouseout=\"hideUl()\" id=\"hardware\">\n        <a href=\"./hardware.html\">HARDWARE\n            <div class=\"click\"> > </div>\n        </a>\n        <div class=\"forMobile__label__line\"></div>\n\n        <ul class=\"mobile\">\n            <li onclick=\"hendleScroll('TerraGeniePRO')\">\n                TerraGenie PRO\n            </li>\n            <li onclick=\"hendleScroll('TerraGenieNX')\">\n                TerraGenie NX\n            </li>\n            <li onclick=\"hendleScroll('GeoGeneiTAB')\">\n                TerraGenie TAB\n            </li>\n        </ul>\n\n    </div>\n\n    <div class=\"forMobile__label\" id=\"contact\">\n        <a href=\"./contact.html\">CONTACT</a>\n        <div class=\"forMobile__label__line\"></div>\n    </div>";
     if (root) {
         root.innerHTML = mobileMenu;
     }
 }
-renderMobileMenu(document.querySelector('#mobileMenu'));
+renderMobileMenu(document.querySelector('#menuForMobile'));
 function renderFooter(root) {
     var footer = "\n\n    <div class=\"footer__columns\">\n    \n    <div class=\"footer__columns__block footer__columns__block--empty\">\n    <a href=\"\"></a>\n    </div>\n\n    <div class=\"footer__columns__block\">\n        <a href=\"./about.html\">ABOUT</a>\n        <a href=\"./hardware.html\">PRODUCTS</a>\n    </div>\n\n    <div class=\"footer__columns__block\">\n        <a href=\"http://www.facebook.com/profile.php?id=100089896091480\" target=\"_blank\">\n            <div></div>\n            Facebook\n        </a>\n\n        <a href=\"http://www.linkedin.com/in/terragenie-ltd-793209257/\" target=\"_blank\">\n            <div></div>\n            Linkedin\n        </a>\n\n        <a href=\"http://api.whatsapp.com/send/?phone=972508282109\" target=\"_blank\">\n            <div></div>\n            Whatsapp\n        </a>\n    </div>\n\n    <div class=\"footer__columns__block footer__columns__block--last\">\n        <p class=\"onlyP\">1 Hashdera St. Zofit, Israel</p>\n\n        <a href=\"tel:+972-9-7415043\">+972-9-7415043</a>\n\n        <p><a href=\"mailto:info@geo-genie.co.il\">info@geo-genie.co.il</a></p>\n    </div>\n    </div>";
     if (root) {
@@ -77,9 +77,20 @@ function hendleScroll(elementId) {
         console.error(error);
     }
 }
-function showMenu() {
-    var menu = document.querySelector('.forMobile');
-    if (menu) {
-        menu.classList.toggle('show');
+function toggleMenu() {
+    console.log('toggleMenu');
+    var menu = document.querySelector('#menuForMobile');
+    if (menu === null || menu === void 0 ? void 0 : menu.classList.contains('display')) {
+        menu.classList.remove('display');
+        menu.classList.add('hide');
+        settings.showMenu = false;
+        document.body.style.overflow = 'auto';
     }
+    else {
+        menu === null || menu === void 0 ? void 0 : menu.classList.remove('hide');
+        menu === null || menu === void 0 ? void 0 : menu.classList.add('display');
+        settings.showMenu = true;
+        document.body.style.overflow = 'hidden';
+    }
+    renderHeader(document.querySelector('#header'));
 }
