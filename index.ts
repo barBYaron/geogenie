@@ -1,11 +1,10 @@
-interface Settings{
+interface Settings {
     showMenu: boolean;
 }
 
-const settings:Settings = {
+const settings: Settings = {
     showMenu: false
 }
-
 
 
 function renderHeader(root: HTMLElement | null) {
@@ -22,7 +21,7 @@ function renderHeader(root: HTMLElement | null) {
   <div class="header__container__empty"></div>
 
   <div class="header__container__menuMobile" onclick="toggleMenu()">
-  <i class="fa-solid fa-bars">${settings.showMenu?"X":"O"}</i> </div>
+  <i class="fa-solid fa-bars">${settings.showMenu ? "X" : "O"}</i> </div>
 
   <div class="header__container__right">
 
@@ -96,13 +95,13 @@ function renderMobileMenu(root: HTMLElement | null) {
         <div class="forMobile__label__line"></div>
     </div>
 
-    <div class="forMobile__label hardware" onmouseover="showUl()" onmouseout="hideUl()" id="hardware">
-        <a href="./hardware.html">HARDWARE
-            <div class="click"> > </div>
+    <div class="forMobile__label hardware" id="hardware" onclick="toggleHardware()">
+        <a>HARDWARE
+            <div class="click" onclick="showUl()" onclick="hideUl()"> > </div>
         </a>
         <div class="forMobile__label__line"></div>
 
-        <ul class="mobile">
+        <ul id="ul-hardware" class="mobile close">
             <li onclick="hendleScroll('TerraGeniePRO')">
                 TerraGenie PRO
             </li>
@@ -176,9 +175,15 @@ renderFooter(document.querySelector('#footer'));
 
 function showUl() {
     const ul = document.querySelector('ul');
+    const contact = document.querySelector('#contact') as HTMLElement;
 
     if (ul) {
         ul.style.opacity = '1';
+        ul.style.zIndex = '999';
+    }
+
+    if (contact) {
+        contact.style.top = '30px';
     }
 }
 
@@ -259,3 +264,47 @@ function toggleMenu() {
     }
     renderHeader(document.querySelector('#header'));
 }
+
+function toggleHardware() {
+    try {
+        console.log('toggleHardware')
+        const hardware = document.querySelector('#hardware');
+        if(!hardware) throw new Error('hardware element not found');
+
+        const ul:HTMLUListElement|null = document.querySelector('#ul-hardware');
+        if(!ul) throw new Error('ul element not found');
+
+        if (ul.classList.contains('close')) {
+            ul.classList.remove('close');
+            ul.classList.add('open');
+
+           
+            ul.style.height = '100px';
+            ul.style.transform = 'scale(1,1) translateY(0px)';
+
+            
+        } else {        
+            ul.classList.remove('open');
+            ul.classList.add('close');
+            // hardware.classList.remove('open');
+            ul.style.height = '0px';
+            ul.style.transform = 'scale(1,0) translateY(-100px)';
+        }
+        
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+// @keyframes close {
+//     0% {
+//         transform: scale(1,1) translateY(30px);
+//         height: 100px;
+//     }
+
+//     100%{
+//         transform: scale(1,0) translateY(0px);
+//         height: 0px;
+//     }
+    
+// }

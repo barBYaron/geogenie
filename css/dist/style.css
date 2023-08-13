@@ -773,28 +773,29 @@ header {
   text-align: center;
   font-size: 1.2rem;
   align-items: flex-start;
-  min-height: 32px;
   padding-bottom: 20px;
   padding-top: 10px;
   padding-left: 0px;
+  z-index: 1;
+  position: relative;
 }
 .forMobile .mobile {
   padding: 0;
   flex-direction: column;
   white-space: nowrap;
-  display: flex;
-  position: absolute;
-  z-index: 999;
+  position: relative;
+  z-index: 0;
   margin: auto;
-  opacity: 0;
   background-color: white;
+  margin-bottom: 2px;
 }
-.forMobile .mobile li {
+.forMobile ul {
+  transition: all 0.5s ease-in-out;
+}
+.forMobile ul li {
   list-style-type: none;
-}
-.forMobile .mobile li:hover {
-  background-color: #e3051b;
-  color: white !important;
+  text-align: left;
+  margin-left: 5px;
 }
 
 #menuForMobile {
@@ -903,7 +904,6 @@ header {
   justify-content: center;
   flex-direction: column;
   align-items: flex-start;
-  padding: 75px 20px;
 }
 .headerPage__conteiner__taxt {
   text-align: left;
@@ -1240,6 +1240,9 @@ header {
   }
   .mainProducts__items__box--left {
     margin-left: 18%;
+  }
+  .mainProducts__items__box--right {
+    margin-right: 18%;
   }
 
   .contactUs__contener {

@@ -9,7 +9,7 @@ function renderHeader(root) {
 }
 renderHeader(document.querySelector('#header'));
 function renderMobileMenu(root) {
-    var mobileMenu = "\n    <div class=\"forMobile__label\" id=\"index\">\n        <a href=\"./index.html\">HOME</a>\n        <div class=\"forMobile__label__line\"></div>\n    </div>\n\n    <div class=\"forMobile__label\" id=\"about\">\n        <a href=\"./about.html\">ABOUT</a>\n        <div class=\"forMobile__label__line\"></div>\n    </div>\n\n    <div class=\"forMobile__label\" id=\"software\">\n        <a href=\"./software.html\">SOFTWARE</a>\n\n        <div class=\"forMobile__label__line\"></div>\n    </div>\n\n    <div class=\"forMobile__label hardware\" onmouseover=\"showUl()\" onmouseout=\"hideUl()\" id=\"hardware\">\n        <a href=\"./hardware.html\">HARDWARE\n            <div class=\"click\"> > </div>\n        </a>\n        <div class=\"forMobile__label__line\"></div>\n\n        <ul class=\"mobile\">\n            <li onclick=\"hendleScroll('TerraGeniePRO')\">\n                TerraGenie PRO\n            </li>\n            <li onclick=\"hendleScroll('TerraGenieNX')\">\n                TerraGenie NX\n            </li>\n            <li onclick=\"hendleScroll('GeoGeneiTAB')\">\n                TerraGenie TAB\n            </li>\n        </ul>\n\n    </div>\n\n    <div class=\"forMobile__label\" id=\"contact\">\n        <a href=\"./contact.html\">CONTACT</a>\n        <div class=\"forMobile__label__line\"></div>\n    </div>";
+    var mobileMenu = "\n    <div class=\"forMobile__label\" id=\"index\">\n        <a href=\"./index.html\">HOME</a>\n        <div class=\"forMobile__label__line\"></div>\n    </div>\n\n    <div class=\"forMobile__label\" id=\"about\">\n        <a href=\"./about.html\">ABOUT</a>\n        <div class=\"forMobile__label__line\"></div>\n    </div>\n\n    <div class=\"forMobile__label\" id=\"software\">\n        <a href=\"./software.html\">SOFTWARE</a>\n\n        <div class=\"forMobile__label__line\"></div>\n    </div>\n\n    <div class=\"forMobile__label hardware\" id=\"hardware\" onclick=\"toggleHardware()\">\n        <a>HARDWARE\n            <div class=\"click\" onclick=\"showUl()\" onclick=\"hideUl()\"> > </div>\n        </a>\n        <div class=\"forMobile__label__line\"></div>\n\n        <ul id=\"ul-hardware\" class=\"mobile close\">\n            <li onclick=\"hendleScroll('TerraGeniePRO')\">\n                TerraGenie PRO\n            </li>\n            <li onclick=\"hendleScroll('TerraGenieNX')\">\n                TerraGenie NX\n            </li>\n            <li onclick=\"hendleScroll('GeoGeneiTAB')\">\n                TerraGenie TAB\n            </li>\n        </ul>\n\n    </div>\n\n    <div class=\"forMobile__label\" id=\"contact\">\n        <a href=\"./contact.html\">CONTACT</a>\n        <div class=\"forMobile__label__line\"></div>\n    </div>";
     if (root) {
         root.innerHTML = mobileMenu;
     }
@@ -24,8 +24,13 @@ function renderFooter(root) {
 renderFooter(document.querySelector('#footer'));
 function showUl() {
     var ul = document.querySelector('ul');
+    var contact = document.querySelector('#contact');
     if (ul) {
         ul.style.opacity = '1';
+        ul.style.zIndex = '999';
+    }
+    if (contact) {
+        contact.style.top = '30px';
     }
 }
 function hideUl() {
@@ -94,3 +99,40 @@ function toggleMenu() {
     }
     renderHeader(document.querySelector('#header'));
 }
+function toggleHardware() {
+    try {
+        console.log('toggleHardware');
+        var hardware = document.querySelector('#hardware');
+        if (!hardware)
+            throw new Error('hardware element not found');
+        var ul = document.querySelector('#ul-hardware');
+        if (!ul)
+            throw new Error('ul element not found');
+        if (ul.classList.contains('close')) {
+            ul.classList.remove('close');
+            ul.classList.add('open');
+            ul.style.height = '100px';
+            ul.style.transform = 'scale(1,1) translateY(0px)';
+        }
+        else {
+            ul.classList.remove('open');
+            ul.classList.add('close');
+            // hardware.classList.remove('open');
+            ul.style.height = '0px';
+            ul.style.transform = 'scale(1,0) translateY(-100px)';
+        }
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+// @keyframes close {
+//     0% {
+//         transform: scale(1,1) translateY(30px);
+//         height: 100px;
+//     }
+//     100%{
+//         transform: scale(1,0) translateY(0px);
+//         height: 0px;
+//     }
+// }

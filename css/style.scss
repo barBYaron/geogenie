@@ -223,7 +223,6 @@ header {
             z-index: 3;
         }
 
-
         &__right {
             display: flex;
             justify-content: flex-end;
@@ -345,33 +344,69 @@ header {
         text-align: center;
         font-size: 1.2rem;
         align-items: flex-start;
-        min-height: 32px;
+        // min-height: 32px;
         padding-bottom: 20px;
         padding-top: 10px;
         padding-left: 0px;
+        z-index: 1;
+        position: relative;
     }
 
     .mobile {
+      
         padding: 0;
         flex-direction: column;
         white-space: nowrap;
-        display: flex;
-        position: absolute;
-        z-index: 999;
+        // display: flex;
+        position: relative;
+        z-index: 0;
         margin: auto;
-        opacity: 0;
+        // opacity: 0;
         background-color: white;
+        margin-bottom: 2px;
 
+        
+
+       
+        
+    }
+
+    ul{
+        transition: all 0.5s ease-in-out;
         li {
             list-style-type: none;
-
-            &:hover {
-                background-color: #e3051b;
-                color: white !important;
-            }
+            text-align: left;
+            margin-left: 5px;
+            // &:hover {
+            //     background-color: #e3051b;
+            //     color: white !important;
+            // }
         }
     }
+   
 }
+
+// .close {
+//     animation: close 0.5s ease-in-out;
+//     animation-fill-mode: forwards;
+// }
+// .open {
+//     animation: close 0.5s ease-in-out reverse;
+//     animation-fill-mode: forwards;
+// }
+
+// @keyframes close {
+//     0% {
+//         transform: scale(1,1) translateY(30px);
+//         height: 100px;
+//     }
+
+//     100%{
+//         transform: scale(1,0) translateY(0px);
+//         height: 0px;
+//     }
+    
+// }
 
 #menuForMobile {
     position: fixed;
@@ -493,7 +528,6 @@ header {
         justify-content: center;
         flex-direction: column;
         align-items: flex-start;
-        padding: 75px 20px;
 
         &__taxt {
             text-align: left;
@@ -937,13 +971,16 @@ header {
             -webkit-box-pack: start !important;
             justify-content: flex-start !important;
 
-
             &__box {
                 margin: 0 3%;
                 width: calc(50% - 20px) !important;
 
                 &--left {
                     margin-left: 18%;
+                }
+
+                &--right {
+                    margin-right: 18%;
                 }
             }
         }
