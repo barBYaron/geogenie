@@ -612,6 +612,7 @@ textarea {
 
 button {
   font-size: 100%;
+  cursor: pointer;
 }
 
 header {
@@ -623,12 +624,6 @@ header {
   display: block;
   background-color: white;
   box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.2);
-}
-@media only screen and (max-width: 992px) {
-  header {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
 }
 
 .current a {
@@ -652,11 +647,6 @@ header {
   align-items: stretch;
   margin-left: auto;
   margin-right: auto;
-}
-@media only screen and (max-width: 991px) {
-  .header__container {
-    padding-right: 5px;
-  }
 }
 .header__container__left {
   justify-content: flex-start;
@@ -689,16 +679,6 @@ header {
   cursor: pointer;
   z-index: 3;
 }
-@media only screen and (min-width: 992px) {
-  .header__container__menuMobile {
-    display: none !important;
-  }
-  .header__container__menuMobile i {
-    width: 30px;
-    height: 30px;
-    fill: currentColor;
-  }
-}
 .header__container__right {
   display: flex;
   justify-content: flex-end;
@@ -706,12 +686,6 @@ header {
   flex-direction: row;
   flex-wrap: nowrap;
   transition-property: opacity, transform, visibility;
-}
-@media only screen and (max-width: 991px) {
-  .header__container__right {
-    visibility: hidden;
-    position: fixed;
-  }
 }
 .header__container__right__label {
   padding: 0px 20px;
@@ -772,8 +746,55 @@ header {
   color: white !important;
 }
 
-.forMobile {
-  display: none;
+.forMobile .hardware:hover .mobile {
+  opacity: 1;
+}
+.forMobile a {
+  text-decoration: none;
+  border-style: solid;
+  border-width: 0;
+  transition-timing-function: ease-in-out;
+  transition-property: background-color, color, border-color;
+  border-color: transparent;
+  color: #5c6062;
+  display: flex;
+}
+.forMobile__line {
+  width: 30px;
+  height: 5px;
+  margin: auto;
+  background-color: #e3051b;
+  border-radius: 40px;
+  opacity: 0;
+}
+.forMobile__label {
+  flex-direction: column;
+  width: 40%;
+  text-align: center;
+  font-size: 1.2rem;
+  align-items: flex-start;
+  min-height: 32px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-left: 0px;
+}
+.forMobile .mobile {
+  padding: 0;
+  flex-direction: column;
+  white-space: nowrap;
+  display: flex;
+  position: absolute;
+  z-index: 999;
+  margin: auto;
+  opacity: 0;
+  background-color: white;
+}
+.forMobile .mobile li {
+  list-style-type: none;
+}
+.forMobile .mobile li:hover {
+  background-color: #e3051b;
+  color: white !important;
 }
 
 #menuForMobile {
@@ -787,56 +808,6 @@ header {
   align-items: flex-start;
   flex-direction: column;
   display: none;
-}
-#menuForMobile .hardware:hover .mobile {
-  opacity: 1;
-}
-#menuForMobile a {
-  text-decoration: none;
-  border-style: solid;
-  border-width: 0;
-  transition-timing-function: ease-in-out;
-  transition-property: background-color, color, border-color;
-  border-color: transparent;
-  color: #5c6062;
-  display: flex;
-}
-#menuForMobile__line {
-  width: 30px;
-  height: 5px;
-  margin: auto;
-  background-color: #e3051b;
-  border-radius: 40px;
-  opacity: 0;
-}
-#menuForMobile__label {
-  flex-direction: column;
-  width: 40%;
-  text-align: center;
-  font-size: 1.2rem;
-  align-items: flex-start;
-  min-height: 32px;
-  padding-bottom: 20px;
-  padding-top: 10px;
-  padding-left: 0px;
-}
-#menuForMobile .mobile {
-  padding: 0;
-  flex-direction: column;
-  white-space: nowrap;
-  display: flex;
-  position: absolute;
-  z-index: 999;
-  margin: auto;
-  opacity: 0;
-  background-color: white;
-}
-#menuForMobile .mobile li {
-  list-style-type: none;
-}
-#menuForMobile .mobile li:hover {
-  background-color: #e3051b;
-  color: white !important;
 }
 
 .display {
@@ -1082,6 +1053,21 @@ header {
   }
 }
 @media only screen and (max-width: 991px) {
+  header {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .header__container__menuMobile i {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+  }
+  .header__container__right {
+    visibility: hidden;
+    position: fixed;
+  }
+
   .WhoIsUsing {
     padding-top: 40px;
   }
@@ -1169,6 +1155,11 @@ header {
 
   .headerHome__contener__taxt {
     width: 75%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .header__container__menuMobile {
+    display: none !important;
   }
 }
 @media only screen and (max-width: 767px) {

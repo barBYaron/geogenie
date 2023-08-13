@@ -1,6 +1,3 @@
-// <a href="/hardware.html#TerraGeniePRO">TerraGeniePRO</a>
-//<a href="/hardware.html#TerraGenieNX">TerraGenie NX</a>
-// <a href="/hardware.html#GeoGeneiTAB">TerraGenie TAB</a>
 interface Settings{
     showMenu: boolean;
 }
@@ -25,7 +22,7 @@ function renderHeader(root: HTMLElement | null) {
   <div class="header__container__empty"></div>
 
   <div class="header__container__menuMobile" onclick="toggleMenu()">
-  <i class="fas fa-bars">${settings.showMenu?"X":"O"}</i> </div>
+  <i class="fa-solid fa-bars">${settings.showMenu?"X":"O"}</i> </div>
 
   <div class="header__container__right">
 
@@ -205,6 +202,7 @@ function getPath() {
     return pageName;
 }
 getPath();
+
 function renderCurrentMenu() {
     const pageName = getPath();
 
