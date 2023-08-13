@@ -175,12 +175,16 @@
 .mainProducts__items__box__learnMore {
   background-color: rgba(255, 255, 255, 0);
   border: 2px solid #5c6062;
-  color: #5c6062;
   padding: 10px 16px;
   text-decoration: none;
   transition: 0.3s;
 }
+.mainProducts__items__box__learnMore a {
+  color: #5c6062 !important;
+}
 .mainProducts__items__box__learnMore:hover {
   background-color: #5c6062;
-  color: white;
+}
+.mainProducts__items__box__learnMore:hover a {
+  color: white !important;
 }

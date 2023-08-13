@@ -205,14 +205,20 @@
             &__learnMore {
                 background-color: rgba(255, 255, 255, 0);
                 border: 2px solid #5c6062;
-                color: #5c6062;
                 padding: 10px 16px;
                 text-decoration: none;
                 transition: 0.3s;
 
+                a {
+                    color: #5c6062 !important;
+                }
+
                 &:hover {
                     background-color: #5c6062;
-                    color: white;
+
+                    a {
+                        color: white !important;
+                    }
                 }
             }
         }

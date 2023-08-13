@@ -87,17 +87,17 @@ function renderFooter(root: HTMLElement | null) {
     </div>
 
     <div class="footer__columns__block">
-        <a href="http://www.facebook.com/profile.php?id=100089896091480">
+        <a href="http://www.facebook.com/profile.php?id=100089896091480" target="_blank">
             <div></div>
             Facebook
         </a>
 
-        <a href="http://www.linkedin.com/in/terragenie-ltd-793209257/">
+        <a href="http://www.linkedin.com/in/terragenie-ltd-793209257/" target="_blank">
             <div></div>
             Linkedin
         </a>
 
-        <a href="http://api.whatsapp.com/send/?phone=972508282109">
+        <a href="http://api.whatsapp.com/send/?phone=972508282109" target="_blank">
             <div></div>
             Whatsapp
         </a>

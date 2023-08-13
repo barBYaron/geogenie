@@ -175,14 +175,18 @@
 .mainProducts__items__box__learnMore {
   background-color: rgba(255, 255, 255, 0);
   border: 2px solid #5c6062;
-  color: #5c6062;
   padding: 10px 16px;
   text-decoration: none;
   transition: 0.3s;
 }
+.mainProducts__items__box__learnMore a {
+  color: #5c6062 !important;
+}
 .mainProducts__items__box__learnMore:hover {
   background-color: #5c6062;
-  color: white;
+}
+.mainProducts__items__box__learnMore:hover a {
+  color: white !important;
 }
 
 .section2 {
@@ -807,24 +811,36 @@ header {
   padding: 10px 16px;
   width: 160px;
 }
+.button a {
+  color: #5c6062;
+  text-decoration: none;
+}
 .button--readMore {
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid white;
   margin-right: 20px;
+}
+.button--readMore a {
   color: white;
 }
 .button--readMore:hover {
   background-color: white;
+}
+.button--readMore:hover a {
   color: #5c6062;
 }
 .button--contactUs {
   background-color: #e3051b;
   border: 1px solid #e3051b;
   margin-right: 0px;
+}
+.button--contactUs a {
   color: white;
 }
 .button--contactUs:hover {
   background-color: rgba(255, 255, 255, 0);
+}
+.button--contactUs:hover a {
   color: #e3051b;
 }
 
@@ -930,7 +946,6 @@ header {
   background-color: #e3051b;
 }
 .products__Block__terra__content--opposite {
-  height: 380px;
   box-align: start;
   align-items: start;
   text-align: left;

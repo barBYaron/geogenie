@@ -376,17 +376,26 @@ header {
     padding: 10px 16px;
     width: 160px;
 
+    a {
+        color: #5c6062;
+        text-decoration: none;
+    }
+
     &--readMore {
         background-color: rgba(255, 255, 255, 0);
         border: 1px solid white;
         margin-right: 20px;
-        // padding: 10px 16px;
-        color: white;
-        // width: 120px;
+
+        a {
+            color: white;
+        }
 
         &:hover {
             background-color: white;
-            color: #5c6062;
+            
+            a {
+                color: #5c6062;
+            }
         }
     }
 
@@ -394,13 +403,17 @@ header {
         background-color: #e3051b;
         border: 1px solid #e3051b;
         margin-right: 0px;
-        // padding: 10px 16px;
-        color: white;
-        // width: 120px;
+
+        a {
+            color: white;
+        }
 
         &:hover {
             background-color: rgba(255, 255, 255, 0);
-            color: #e3051b;
+           
+            a {
+                color: #e3051b;
+            }
         }
     }
 }
@@ -488,9 +501,6 @@ header {
                 display: flex;
                 flex-direction: column;
                 color: white;
-                // -webkit-box-align: end;
-                // -webkit-box-orient: vertical;
-                // -webkit-box-direction: normal;
 
                 &__title {
                     font-size: 35px;
@@ -531,7 +541,6 @@ header {
                 }
 
                 &--opposite {
-                    height: 380px;
                     box-align: start;
                     align-items: start;
                     text-align: left;
