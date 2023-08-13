@@ -25,6 +25,7 @@
         <div class="header" id="header"></div>
     </header>
 
+    <div id="mobileMenu"></div>
 
     <section class="headerHome">
 
@@ -41,7 +42,7 @@
                 <!-- taxt -> text -->
                 <div class="headerHome__contener__headerHomeTaxt__buttons">
                     <button class="button--readMore button">
-                       <a href="./about.html">Read More</a></button>
+                        <a href="./about.html">Read More</a></button>
                     <button class="button--contactUs button"><a href="./contact.html">Contact Us</a></button>
                 </div>
             </div>
@@ -330,17 +331,18 @@
                     <img src="	https://geo-genie.co.il/wp-content/uploads/2022/03/Smart-Huayi-GNSS-E91-trimmed-768x597.png"
                         alt="">
                 </div>
-                
-                <p>
-                        Professional surveying
-                        platform and an
-                        information system that
-                        works in the field or in the
-                        office with one adaptive
-                        UI/UX
-                    </p>
 
-                <button class="mainProducts__items__box__learnMore button"><a href="./hardware.html">Learn more ></a></button>
+                <p>
+                    Professional surveying
+                    platform and an
+                    information system that
+                    works in the field or in the
+                    office with one adaptive
+                    UI/UX
+                </p>
+
+                <button class="mainProducts__items__box__learnMore button"><a href="./hardware.html">Learn more
+                        ></a></button>
             </div>
 
             <!--          -->
@@ -348,19 +350,20 @@
                 <div class="mainProducts__items__box__titel">
                     <h3><span>
                             Terra</span>Genie PRO</h3>
-                            <img src="	https://geo-genie.co.il/wp-content/uploads/2022/03/TerraGenie-Pro.png" alt="">
+                    <img src="	https://geo-genie.co.il/wp-content/uploads/2022/03/TerraGenie-Pro.png" alt="">
                 </div>
-                
-                <p>High-performance IMU-
-                        
-                        RTK GNSS receiver with
-                        
-                        full GNSS tracking + L-
-                        
-                        Band
-                    </p>
 
-                <button class="mainProducts__items__box__learnMore button"><a href="/hardware.html#TerraGeniePRO">Learn more ></a></button>
+                <p>High-performance IMU-
+
+                    RTK GNSS receiver with
+
+                    full GNSS tracking + L-
+
+                    Band
+                </p>
+
+                <button class="mainProducts__items__box__learnMore button"><a href="/hardware.html#TerraGeniePRO">Learn
+                        more ></a></button>
             </div>
 
             <!--           -->
@@ -368,17 +371,18 @@
                 <div class="mainProducts__items__box__titel">
                     <h3><span>
                             Terra</span>Genie NX</h3>
-                            <img src="	https://geo-genie.co.il/wp-content/uploads/2022/03/TerraGenie-NX-1.png" alt="">
+                    <img src="	https://geo-genie.co.il/wp-content/uploads/2022/03/TerraGenie-NX-1.png" alt="">
                 </div>
-                
-                <p>
-                        Ultimate pocket
-                        GNSS+IMU receiver. offers
-                        best-in-class GNSS signal
-                        tracking
-                    </p>
 
-                <button class="mainProducts__items__box__learnMore button"><a href="/hardware.html#TerraGenieNX">Learn more ></a></button>
+                <p>
+                    Ultimate pocket
+                    GNSS+IMU receiver. offers
+                    best-in-class GNSS signal
+                    tracking
+                </p>
+
+                <button class="mainProducts__items__box__learnMore button"><a href="/hardware.html#TerraGenieNX">Learn
+                        more ></a></button>
             </div>
 
             <!--           -->
@@ -386,15 +390,16 @@
                 <div class="mainProducts__items__box__titel">
                     <h3><span>
                             Terra</span>Genie TAB</h3>
-                            <img src="https://geo-genie.co.il/wp-content/uploads/2022/03/PRO-copy-1-1-150x142.png" alt="">
+                    <img src="https://geo-genie.co.il/wp-content/uploads/2022/03/PRO-copy-1-1-150x142.png" alt="">
                 </div>
-                
-                <p>8-inch professional RTK
-                        tablet to bring accuracy at
-                        your fingertips
-                    </p>
 
-                <button class="mainProducts__items__box__learnMore button"><a href="/hardware.html#GeoGeneiTAB">Learn more ></a></button>
+                <p>8-inch professional RTK
+                    tablet to bring accuracy at
+                    your fingertips
+                </p>
+
+                <button class="mainProducts__items__box__learnMore button"><a href="/hardware.html#GeoGeneiTAB">Learn
+                        more ></a></button>
             </div>
 
         </div>
@@ -404,6 +409,51 @@
     <section class="secFooter">
         <div class="footer wrapper" id="footer"></div>
     </section>
+
+    <!-- <div class="forMobile">
+
+        <div class="forMobile__label" id="index">
+            <a href="./index.html">HOME</a>
+            <div class="forMobile__label__line"></div>
+        </div>
+
+        <div class="forMobile__label" id="about">
+            <a href="./about.html">ABOUT</a>
+            <div class="forMobile__label__line"></div>
+        </div>
+
+        <div class="forMobile__label" id="software">
+            <a href="./software.html">SOFTWARE</a>
+
+            <div class="forMobile__label__line"></div>
+        </div>
+
+        <div class="forMobile__label hardware" onmouseover="showUl()" onmouseout="hideUl()" id="hardware">
+            <a href="./hardware.html">HARDWARE
+                <div class="click"> > </div>
+            </a>
+            <div class="forMobile__label__line"></div>
+
+            <ul class="mobile">
+                <li onclick="hendleScroll('TerraGeniePRO')">
+                    TerraGenie PRO
+                </li>
+                <li onclick="hendleScroll('TerraGenieNX')">
+                    TerraGenie NX
+                </li>
+                <li onclick="hendleScroll('GeoGeneiTAB')">
+                    TerraGenie TAB
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="forMobile__label" id="contact">
+            <a href="./contact.html">CONTACT</a>
+            <div class="forMobile__label__line"></div>
+        </div>
+
+    </div> -->
 
 </body>
 

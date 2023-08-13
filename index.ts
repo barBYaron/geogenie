@@ -1,3 +1,7 @@
+// <a href="/hardware.html#TerraGeniePRO">TerraGeniePRO</a>
+//<a href="/hardware.html#TerraGenieNX">TerraGenie NX</a>
+// <a href="/hardware.html#GeoGeneiTAB">TerraGenie TAB</a>
+
 function renderHeader(root: HTMLElement | null) {
     const header = `
   <div class="header__container">
@@ -11,53 +15,48 @@ function renderHeader(root: HTMLElement | null) {
 
   <div class="header__container__empty"></div>
 
-  
-  <div class="header__container__menuMobile" onmouseover="showMenu()">
-  <i class="fas fa-bars">O</i>
-  </div>
-
+  <div class="header__container__menuMobile" onclick="showMenu()">
+  <i class="fas fa-bars">O</i> </div>
 
   <div class="header__container__right">
 
-
-
-      <div class="header__container__right__label">
+      <div class="header__container__right__label"  id="index">
           <a href="./index.html">HOME</a>
           <div class="header__container__right__label__line"></div>
       </div>
 
-      <div class="header__container__right__label">
+      <div class="header__container__right__label"  id="about">
           <a href="./about.html">ABOUT</a>
           <div class="header__container__right__label__line"></div>
       </div>
 
-      <div class="header__container__right__label">
+      <div class="header__container__right__label" id="software">
           <a href="./software.html">SOFTWARE</a>
           
           <div class="header__container__right__label__line"></div>
       </div>
 
-      <div class="header__container__right__label hardware" onmouseover="showUl()" onmouseout="hideUl()">
+      <div class="header__container__right__label hardware" onmouseover="showUl()" onmouseout="hideUl()" id="hardware">
           <a href="./hardware.html">HARDWARE
               <div class="click"> > </div>
          </a>
-         <div class="header__container__right__label__line"></div>
+         <div class="header__container__right__label__line" ></div>
          
          <ul>
-         <li>
-             <a href="/hardware.html#TerraGeniePRO">TerraGenie PRO</a>
+         <li onclick="hendleScroll('TerraGeniePRO')">
+             TerraGenie PRO
          </li>
-         <li>
-             <a href="/hardware.html#TerraGenieNX">TerraGenie NX</a>
+         <li onclick="hendleScroll('TerraGenieNX')">
+             TerraGenie NX
          </li>
-         <li>
-             <a href="/hardware.html#GeoGeneiTAB">TerraGenie TAB</a>
+         <li onclick="hendleScroll('GeoGeneiTAB')">
+             TerraGenie TAB
          </li>
         </ul>
 
       </div>
 
-      <div class="header__container__right__label">
+      <div class="header__container__right__label" id="contact">
           <a href="./contact.html">CONTACT</a>
           <div class="header__container__right__label__line"></div>
       </div>
@@ -71,6 +70,61 @@ function renderHeader(root: HTMLElement | null) {
     }
 }
 renderHeader(document.querySelector('#header'));
+
+
+function renderMobileMenu(root: HTMLElement | null) {
+    const mobileMenu = `
+    <div class="forMobile">
+
+    <div class="forMobile__label" id="index">
+        <a href="./index.html">HOME</a>
+        <div class="forMobile__label__line"></div>
+    </div>
+
+    <div class="forMobile__label" id="about">
+        <a href="./about.html">ABOUT</a>
+        <div class="forMobile__label__line"></div>
+    </div>
+
+    <div class="forMobile__label" id="software">
+        <a href="./software.html">SOFTWARE</a>
+
+        <div class="forMobile__label__line"></div>
+    </div>
+
+    <div class="forMobile__label hardware" onmouseover="showUl()" onmouseout="hideUl()" id="hardware">
+        <a href="./hardware.html">HARDWARE
+            <div class="click"> > </div>
+        </a>
+        <div class="forMobile__label__line"></div>
+
+        <ul class="mobile">
+            <li onclick="hendleScroll('TerraGeniePRO')">
+                TerraGenie PRO
+            </li>
+            <li onclick="hendleScroll('TerraGenieNX')">
+                TerraGenie NX
+            </li>
+            <li onclick="hendleScroll('GeoGeneiTAB')">
+                TerraGenie TAB
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="forMobile__label" id="contact">
+        <a href="./contact.html">CONTACT</a>
+        <div class="forMobile__label__line"></div>
+    </div>
+
+</div>`
+
+    if (root) {
+        root.innerHTML = mobileMenu;
+    }
+}
+renderMobileMenu(document.querySelector('#mobileMenu'));
+
 
 function renderFooter(root: HTMLElement | null) {
     const footer = `
@@ -126,19 +180,70 @@ function showUl() {
     }
 }
 
-
 function hideUl() {
     const ul = document.querySelector('ul');
 
     if (ul) {
         ul.style.opacity = '0';
     }
-} 
+}
 
-function showMenu() {
-    const menu = document.querySelector('ul');
+function getPath() {
+    const path = window.location.pathname;
+    const pathArr = path.split('/');
+    const pathName = pathArr[pathArr.length - 1];
+
+    const pageName = pathName.split('.')[0];
+
+    console.log(pageName)
+
+    return pageName;
+}
+getPath();
+function renderCurrentMenu() {
+    const pageName = getPath();
+
+    const menu = document.querySelector(`#${pageName}`);
+
 
     if (menu) {
-        menu.style.visibility = 'visible';
+        menu.classList.add('current');
+    }
+}
+renderCurrentMenu();
+
+function getElementPositionFromTop(elementId: string) {
+    try {
+        const element = document.getElementById(elementId);
+
+        if (!element) throw new Error('element not found');
+        let pos = element.offsetTop;
+
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+function hendleScroll(elementId: string) {
+    try {
+        const element = document.getElementById(elementId);
+
+        if (!element) throw new Error('element not found');
+        let pos = element.offsetTop;
+
+        window.scrollTo({
+            top: pos,
+            behavior: 'smooth'
+        })
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+function showMenu() {
+    const menu = document.querySelector('.forMobile');
+
+    if (menu) {
+        menu.classList.toggle('show');
     }
 }
