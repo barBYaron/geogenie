@@ -83,6 +83,9 @@
                     height: 98%;
                     padding: 0 5px;
                     background: rgba(92, 96, 98, 0.7);
+                    line-height: 1.6;
+                    font-size: 14px;
+                    font-weight: 400;
 
                     &:hover {
                         opacity: 1;
@@ -153,6 +156,14 @@
 }
 
 .mainProducts {
+    margin-bottom: 80px;
+
+    &__rightIcon {
+        position: absolute;
+        top: 160%;
+        right: 0;
+        z-index: -1;
+    }
 
     &__items {
         display: flex;
@@ -222,5 +233,12 @@
                 }
             }
         }
+    }
+
+    &__leftIcon {
+        position: absolute;
+        left: 0px;
+        bottom: -232%;
+        z-index: -1;
     }
 }

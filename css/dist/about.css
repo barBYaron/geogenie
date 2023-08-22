@@ -19,10 +19,9 @@
   margin-bottom: 40px;
 }
 .section2__contener__item__icon {
+  max-width: 25%;
   width: 78px;
   height: 55px;
-  z-index: 1;
-  border: 1px solid #5c6062;
 }
 .section2__contener__item__line {
   width: 74%;

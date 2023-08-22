@@ -18,12 +18,8 @@ body {
     text-align: center;
 }
 
-
-
-
 .click {
-    margin-left: 10px;
-    transform: rotate(90deg);
+    margin-top: 2px;
 }
 
 .secFooter {
@@ -62,6 +58,7 @@ body {
                 flex-wrap: nowrap;
                 align-items: flex-start;
                 padding: 20px;
+         
 
                 &--last {
                     padding-top: 0px;
@@ -75,8 +72,27 @@ body {
                     transition-duration: 0.3s;
                     cursor: pointer;
 
+                    img {
+                        width: 180px;
+                        height: auto;
+                    }
+
                     &:hover {
                         color: #e3051b;
+
+                        .footer__columns__block__icon {
+                            border:1px solid #e3051b;
+
+                            svg {
+                                fill: #e3051b;
+                            }
+                        }
+
+                        .divWhatsApp {
+                            svg {
+                                fill: #e3051b;
+                            }
+                        }
                     }
                 }
 
@@ -88,14 +104,14 @@ body {
                     flex-wrap: nowrap;
                     color: white;
                     align-items: center;
-                    padding: 0px 20px 20px 20px;
+                    padding: 0px 10px 20px 0px;
                     text-decoration: none;
                     border-style: solid;
                     border-width: 0;
                     transition-timing-function: ease-in-out;
                     transition-property: background-color, color, border-color;
                     border-color: transparent;
-
+                  
 
                     div {
                         position: relative;
@@ -103,8 +119,32 @@ body {
                         width: 34px;
                         height: 34px;
                         border-radius: 50%;
-                        border: 2px solid white;
+                        border: 1px solid white;
                         margin-right: 8px;
+                        text-align: center;
+                        padding: 7px;
+                        transition-duration: 0.3s;
+                     
+                        svg {
+                            display: flex;
+                            // fill:rgb(172, 33, 33)te !important;
+                            width: 18px;
+                            height: 18px;
+                            z-index: 2;
+                        }
+                    }
+                    
+                    .divWhatsApp {
+                        border: none !important;
+                        transition-duration: 0.3s;
+
+                        svg {
+                            position: relative;
+                            top: -5px;
+                            right: 8px;
+                            width: 34px;
+                            height: 34px;
+                        }
                     }
                 }
 
@@ -164,7 +204,8 @@ header {
 
 .current {
     a {
-        font-weight: bolder;
+        font-weight: 900;
+
     }
 
     .header__container__right__label__line {
@@ -221,6 +262,7 @@ header {
             display: block;
             cursor: pointer;
             z-index: 3;
+            font-weight: bolder;
         }
 
         &__right {
@@ -353,7 +395,7 @@ header {
     }
 
     .mobile {
-      
+
         padding: 0;
         flex-direction: column;
         white-space: nowrap;
@@ -365,14 +407,15 @@ header {
         background-color: white;
         margin-bottom: 2px;
 
-        
 
-       
-        
+
+
+
     }
 
-    ul{
+    ul {
         transition: all 0.5s ease-in-out;
+
         li {
             list-style-type: none;
             text-align: left;
@@ -383,30 +426,8 @@ header {
             // }
         }
     }
-   
+
 }
-
-// .close {
-//     animation: close 0.5s ease-in-out;
-//     animation-fill-mode: forwards;
-// }
-// .open {
-//     animation: close 0.5s ease-in-out reverse;
-//     animation-fill-mode: forwards;
-// }
-
-// @keyframes close {
-//     0% {
-//         transform: scale(1,1) translateY(30px);
-//         height: 100px;
-//     }
-
-//     100%{
-//         transform: scale(1,0) translateY(0px);
-//         height: 0px;
-//     }
-    
-// }
 
 #menuForMobile {
     position: fixed;
@@ -772,6 +793,14 @@ header {
                 width: calc(25% - 20px);
             }
         }
+
+        &__rightIcon {
+            display: none;
+        }
+
+        &__leftIcon {
+            display: none;
+        }
     }
 
     .section2 {
@@ -884,6 +913,7 @@ header {
         }
     }
 }
+
 ///
 
 @media only screen and (max-width: 767px) {

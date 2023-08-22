@@ -19,10 +19,11 @@
             margin-bottom: 40px;
 
             &__icon {
+                max-width: 25%;
                 width: 78px;
                 height: 55px;
-                z-index: 1;
-                border: 1px solid #5c6062;
+                // z-index: 1;
+                // border: 1px solid #5c6062;
             }
 
             &__line {

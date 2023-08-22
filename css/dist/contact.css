@@ -45,6 +45,7 @@
 .contactUs__contener__icons a {
   color: #5c6062;
   text-decoration: none;
+  display: block;
 }
 .contactUs__contener__icons__box {
   flex-direction: column;
@@ -55,10 +56,13 @@
   font-size: 22px;
   align-items: center;
 }
+.contactUs__contener__icons__box .a {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
 .contactUs__contener__icons__box__item {
   width: 50px;
   height: 50px;
-  border: 1px solid #000000;
 }
 
 .form__contener {
@@ -129,7 +133,21 @@
 .form__contener__links a {
   width: 61px;
   height: 56px;
-  border: 1px solid #5C6062;
   border-radius: 50%;
   margin: auto;
+}
+
+.contenerMail {
+  position: relative;
+  top: -105px;
+  background-color: #5c6062a6;
+  width: 80%;
+  height: 1000px;
+  box-shadow: 0px 20px 26px rgba(0, 0, 0, 0.05), 0px 8px 9px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(30px);
+  border-radius: 16px;
+}
+.contenerMail img {
+  width: 50%;
+  height: auto;
 }
