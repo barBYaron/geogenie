@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+
+    <div class="forMobile__label" id="index">
+        <a href="./index.html">HOME</a>
+        <div class="forMobile__label__line"></div>
+    </div>
+
+    <div class="forMobile__label" id="about">
+        <a href="./about.html">ABOUT</a>
+        <div class="forMobile__label__line"></div>
+    </div>
+
+    <div class="forMobile__label" id="software">
+        <a href="./software.html">SOFTWARE</a>
+
+        <div class="forMobile__label__line"></div>
+    </div>
+
+    <div class="forMobile__label hardware" id="hardware" onclick="toggleHardware()">
+        <a>HARDWARE
+            <div class="click" onclick="showUl()" onclick="hideUl()">
+                <img src="./meinDist/mailImage/errow.png" alt="">
+            </div>
+        </a>
+        <div class="forMobile__label__line"></div>
+
+        <ul id="ul-hardware" class="mobile close" style="height:0px; transform:scale(1,0)">
+            <li onclick="hendleScroll('TerraGeniePRO')">
+                TerraGenie PRO
+            </li>
+            <li onclick="hendleScroll('TerraGenieNX')">
+                TerraGenie NX
+            </li>
+            <li onclick="hendleScroll('GeoGeneiTAB')">
+                TerraGenie TAB
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="forMobile__label" id="contact">
+        <a href="./contact.html">CONTACT</a>
+        <div class="forMobile__label__line"></div>
+    </div>
+
+</body>
+
+</html>

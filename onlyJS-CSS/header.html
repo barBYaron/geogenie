@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="header__container">
+
+        <div class="header__container__left">
+            <a href="./index.html">
+                <img src="https://geo-genie.co.il/wp-content/uploads/2023/01/TerraGenie_Logo-removebg-preview-768x129.png"
+                    alt="">
+            </a>
+        </div>
+
+        <div class="header__container__empty"></div>
+
+        <div class="header__container__menuMobile" onclick="toggleMenu()">
+            <img id="iconMenu2" src="./meinDist/mailImage/menuMobile.png" alt="">
+        </div>
+
+        <div class="header__container__right">
+
+            <div class="header__container__right__label" id="index">
+                <a href="./index.html">HOME</a>
+                <div class="header__container__right__label__line"></div>
+            </div>
+
+            <div class="header__container__right__label" id="about">
+                <a href="./about.html">ABOUT</a>
+                <div class="header__container__right__label__line"></div>
+            </div>
+
+            <div class="header__container__right__label" id="software">
+                <a href="./software.html">SOFTWARE</a>
+
+                <div class="header__container__right__label__line"></div>
+            </div>
+
+            <div class="header__container__right__label hardware" onmouseover="showUl()" onmouseout="hideUl()"
+                id="hardware">
+                <a href="./hardware.html">HARDWARE
+                    <div class="click">
+                        <img src="./meinDist/mailImage/errow.png" alt="">
+                    </div>
+                </a>
+                <div class="header__container__right__label__line"></div>
+
+                <ul>
+                    <li onclick="hendleScroll('TerraGeniePRO')">
+                        TerraGenie PRO
+                    </li>
+                    <li onclick="hendleScroll('TerraGenieNX')">
+                        TerraGenie NX
+                    </li>
+                    <li onclick="hendleScroll('GeoGeneiTAB')">
+                        TerraGenie TAB
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="header__container__right__label" id="contact">
+                <a href="./contact.html">CONTACT</a>
+                <div class="header__container__right__label__line"></div>
+            </div>
+
+        </div>
+
+    </div>;
+</body>
+
+</html>
